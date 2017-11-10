@@ -1,5 +1,7 @@
 # Banshee
 
+This is a fork for class project
+
 This is a DRAM cache simulator implemented on top of zsim (https://github.com/s5z/zsim). The simulator supports the following DRAM cache designs. 
 
 - Banshee [1]
