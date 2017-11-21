@@ -1,0 +1,119 @@
+\hypertarget{classNullCore}{\section{Null\-Core Class Reference}
+\label{classNullCore}\index{Null\-Core@{Null\-Core}}
+}
+
+
+{\ttfamily \#include $<$null\-\_\-core.\-h$>$}
+
+Inheritance diagram for Null\-Core\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classNullCore}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNullCore_a5ff75e3d1ab734fdf99a60ec3fcf339a}{Null\-Core} (g\-\_\-string \&\-\_\-name)
+\item 
+\hypertarget{classNullCore_a3cadc32e2edbce65f893d24468dd8bdf}{void {\bfseries init\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$parent\-Stat)}\label{classNullCore_a3cadc32e2edbce65f893d24468dd8bdf}
+
+\item 
+\hypertarget{classNullCore_ae97e480ddfaf99874fc480fc2c54cf33}{uint64\-\_\-t {\bfseries get\-Instrs} () const }\label{classNullCore_ae97e480ddfaf99874fc480fc2c54cf33}
+
+\item 
+\hypertarget{classNullCore_a76688318cc316e0e67d46ef64a61900f}{uint64\-\_\-t {\bfseries get\-Phase\-Cycles} () const }\label{classNullCore_a76688318cc316e0e67d46ef64a61900f}
+
+\item 
+\hypertarget{classNullCore_a9094cf29201bcc8e4da303c7563a7256}{uint64\-\_\-t {\bfseries get\-Cycles} () const }\label{classNullCore_a9094cf29201bcc8e4da303c7563a7256}
+
+\item 
+\hypertarget{classNullCore_a37e0ddd3bc6cfac1e6e60a8192450f1b}{void {\bfseries context\-Switch} (int32\-\_\-t gid)}\label{classNullCore_a37e0ddd3bc6cfac1e6e60a8192450f1b}
+
+\item 
+\hypertarget{classNullCore_a684c69e7e88f66642fb171c21185665f}{virtual void {\bfseries join} ()}\label{classNullCore_a684c69e7e88f66642fb171c21185665f}
+
+\item 
+\hypertarget{classNullCore_a158673562bc43cd3e25be911b212cdfb}{\hyperlink{structInstrFuncPtrs}{Instr\-Func\-Ptrs} {\bfseries Get\-Func\-Ptrs} ()}\label{classNullCore_a158673562bc43cd3e25be911b212cdfb}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNullCore_a85a4f1a2b9e2060751889d65cba34300}{void {\bfseries bbl} (\hyperlink{structBblInfo}{Bbl\-Info} $\ast$bbl\-Instrs)}\label{classNullCore_a85a4f1a2b9e2060751889d65cba34300}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNullCore_a9ab27a5bee6a8ea42d21b61b261e5ba6}{static void {\bfseries Load\-Func} (T\-H\-R\-E\-A\-D\-I\-D tid, A\-D\-D\-R\-I\-N\-T addr)}\label{classNullCore_a9ab27a5bee6a8ea42d21b61b261e5ba6}
+
+\item 
+\hypertarget{classNullCore_a691fe50021d9c1bf60a082a6ed3f8275}{static void {\bfseries Store\-Func} (T\-H\-R\-E\-A\-D\-I\-D tid, A\-D\-D\-R\-I\-N\-T addr)}\label{classNullCore_a691fe50021d9c1bf60a082a6ed3f8275}
+
+\item 
+\hypertarget{classNullCore_ab39db2af3c311625b3fc90d91c1e4a9c}{static void {\bfseries Bbl\-Func} (T\-H\-R\-E\-A\-D\-I\-D tid, A\-D\-D\-R\-I\-N\-T bbl\-Addr, \hyperlink{structBblInfo}{Bbl\-Info} $\ast$bbl\-Info)}\label{classNullCore_ab39db2af3c311625b3fc90d91c1e4a9c}
+
+\item 
+\hypertarget{classNullCore_a68c4e6099ba2842d2b65bd0df5b8440e}{static void {\bfseries Pred\-Load\-Func} (T\-H\-R\-E\-A\-D\-I\-D tid, A\-D\-D\-R\-I\-N\-T addr, B\-O\-O\-L pred)}\label{classNullCore_a68c4e6099ba2842d2b65bd0df5b8440e}
+
+\item 
+\hypertarget{classNullCore_ab5a9f6914b66ee69d8576a8a76e2aad1}{static void {\bfseries Pred\-Store\-Func} (T\-H\-R\-E\-A\-D\-I\-D tid, A\-D\-D\-R\-I\-N\-T addr, B\-O\-O\-L pred)}\label{classNullCore_ab5a9f6914b66ee69d8576a8a76e2aad1}
+
+\item 
+\hypertarget{classNullCore_ab2805cc932388c43a83d55556742b829}{static void {\bfseries Branch\-Func} (T\-H\-R\-E\-A\-D\-I\-D, A\-D\-D\-R\-I\-N\-T, B\-O\-O\-L, A\-D\-D\-R\-I\-N\-T, A\-D\-D\-R\-I\-N\-T)}\label{classNullCore_ab2805cc932388c43a83d55556742b829}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classNullCore_a546157d127fa2a570166854d5c7cc065}{uint64\-\_\-t {\bfseries instrs}}\label{classNullCore_a546157d127fa2a570166854d5c7cc065}
+
+\item 
+\hypertarget{classNullCore_a3974cccfba88af1227f7915d251763ad}{uint64\-\_\-t {\bfseries cur\-Cycle}}\label{classNullCore_a3974cccfba88af1227f7915d251763ad}
+
+\item 
+\hypertarget{classNullCore_adb6af023ef40930dd8e3d0dd81ffcf09}{uint64\-\_\-t {\bfseries phase\-End\-Cycle}}\label{classNullCore_adb6af023ef40930dd8e3d0dd81ffcf09}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\$lic\$ Copyright (C) 2012-\/2015 by Massachusetts Institute of Technology Copyright (C) 2010-\/2013 by The Board of Trustees of Stanford University
+
+This file is part of zsim.
+
+zsim is free software; you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, version 2.
+
+If you use this software in your research, we request that you reference the zsim paper (\char`\"{}\-Z\-Sim\-: Fast and Accurate Microarchitectural Simulation of
+\-Thousand-\/\-Core Systems\char`\"{}, Sanchez and Kozyrakis, I\-S\-C\-A-\/40, June 2013) as the source of the simulator in any publications that use this software, and that you send us a citation of your work.
+
+zsim is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNullCore_a5ff75e3d1ab734fdf99a60ec3fcf339a}{\index{Null\-Core@{Null\-Core}!Null\-Core@{Null\-Core}}
+\index{Null\-Core@{Null\-Core}!NullCore@{Null\-Core}}
+\subsubsection[{Null\-Core}]{\setlength{\rightskip}{0pt plus 5cm}Null\-Core\-::\-Null\-Core (
+\begin{DoxyParamCaption}
+\item[{g\-\_\-string \&}]{\-\_\-name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classNullCore_a5ff75e3d1ab734fdf99a60ec3fcf339a}
+\$lic\$ Copyright (C) 2012-\/2015 by Massachusetts Institute of Technology Copyright (C) 2010-\/2013 by The Board of Trustees of Stanford University
+
+This file is part of zsim.
+
+zsim is free software; you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, version 2.
+
+If you use this software in your research, we request that you reference the zsim paper (\char`\"{}\-Z\-Sim\-: Fast and Accurate Microarchitectural Simulation of
+\-Thousand-\/\-Core Systems\char`\"{}, Sanchez and Kozyrakis, I\-S\-C\-A-\/40, June 2013) as the source of the simulator in any publications that use this software, and that you send us a citation of your work.
+
+zsim is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+null\-\_\-core.\-h\item 
+null\-\_\-core.\-cpp\end{DoxyCompactItemize}

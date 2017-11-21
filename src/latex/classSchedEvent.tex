@@ -1,0 +1,78 @@
+\hypertarget{classSchedEvent}{\section{Sched\-Event Class Reference}
+\label{classSchedEvent}\index{Sched\-Event@{Sched\-Event}}
+}
+Inheritance diagram for Sched\-Event\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSchedEvent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSchedEvent_a072a1e4ed6048b8c6c65daac23094f39}{{\bfseries Sched\-Event} (\hyperlink{classDDRMemory}{D\-D\-R\-Memory} $\ast$\-\_\-mem, int32\-\_\-t domain)}\label{classSchedEvent_a072a1e4ed6048b8c6c65daac23094f39}
+
+\item 
+void \hyperlink{classSchedEvent_aabd0b9e2eedd6a393aa9fbdb45d8fab4}{parent\-Done} (uint64\-\_\-t start\-Cycle)
+\item 
+void \hyperlink{classSchedEvent_a2b7f25cd8cd2e344f468b7190db9e997}{simulate} (uint64\-\_\-t start\-Cycle)
+\item 
+\hypertarget{classSchedEvent_ad6adc031ae1c64f784034efb3d619e97}{void {\bfseries enqueue} (uint64\-\_\-t cycle)}\label{classSchedEvent_ad6adc031ae1c64f784034efb3d619e97}
+
+\item 
+\hypertarget{classSchedEvent_a12c56bd0b5ce1c9646d634ccc2c606d8}{void {\bfseries annul} ()}\label{classSchedEvent_a12c56bd0b5ce1c9646d634ccc2c606d8}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSchedEvent_a1a4d00f317662519887844381182c129}{\hyperlink{classSchedEvent}{Sched\-Event} $\ast$ \hyperlink{classSchedEvent_a1a4d00f317662519887844381182c129}{next}}\label{classSchedEvent_a1a4d00f317662519887844381182c129}
+
+\begin{DoxyCompactList}\small\item\em for event freelist \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Globally allocated event for scheduling
+
+N\-O\-T\-E\-: This event plus the bit of logic in \hyperlink{classDDRMemory}{D\-D\-R\-Memory} that deals with event management can be generalized to deal with event-\/driven classes that need to be ticked according to varying constraints. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSchedEvent_aabd0b9e2eedd6a393aa9fbdb45d8fab4}{\index{Sched\-Event@{Sched\-Event}!parent\-Done@{parent\-Done}}
+\index{parent\-Done@{parent\-Done}!SchedEvent@{Sched\-Event}}
+\subsubsection[{parent\-Done}]{\setlength{\rightskip}{0pt plus 5cm}void Sched\-Event\-::parent\-Done (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{start\-Cycle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classSchedEvent_aabd0b9e2eedd6a393aa9fbdb45d8fab4}
+\$lic\$ Copyright (C) 2012-\/2015 by Massachusetts Institute of Technology Copyright (C) 2010-\/2013 by The Board of Trustees of Stanford University
+
+This file is part of zsim.
+
+zsim is free software; you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, version 2.
+
+If you use this software in your research, we request that you reference the zsim paper (\char`\"{}\-Z\-Sim\-: Fast and Accurate Microarchitectural Simulation of
+\-Thousand-\/\-Core Systems\char`\"{}, Sanchez and Kozyrakis, I\-S\-C\-A-\/40, June 2013) as the source of the simulator in any publications that use this software, and that you send us a citation of your work.
+
+zsim is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+Reimplemented from \hyperlink{classTimingEvent_a55e7e2942d6607eb2a9dd484baf39070}{Timing\-Event}.
+
+\hypertarget{classSchedEvent_a2b7f25cd8cd2e344f468b7190db9e997}{\index{Sched\-Event@{Sched\-Event}!simulate@{simulate}}
+\index{simulate@{simulate}!SchedEvent@{Sched\-Event}}
+\subsubsection[{simulate}]{\setlength{\rightskip}{0pt plus 5cm}void Sched\-Event\-::simulate (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{start\-Cycle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classSchedEvent_a2b7f25cd8cd2e344f468b7190db9e997}
+this function is called from contention sim Simulate\-Phase\-Thread the event is taken from priotity queue if the access can not serviced, then schedule it at a later cycle 
+
+Implements \hyperlink{classTimingEvent}{Timing\-Event}.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+ddr\-\_\-mem.\-cpp\end{DoxyCompactItemize}

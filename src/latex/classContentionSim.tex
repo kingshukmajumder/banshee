@@ -1,0 +1,51 @@
+\hypertarget{classContentionSim}{\section{Contention\-Sim Class Reference}
+\label{classContentionSim}\index{Contention\-Sim@{Contention\-Sim}}
+}
+Inheritance diagram for Contention\-Sim\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classContentionSim}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classContentionSim_a4c7d65f216bc7cd5b4db0f4736d269d3}{{\bfseries Contention\-Sim} (uint32\-\_\-t \-\_\-num\-Domains, uint32\-\_\-t \-\_\-num\-Sim\-Threads)}\label{classContentionSim_a4c7d65f216bc7cd5b4db0f4736d269d3}
+
+\item 
+\hypertarget{classContentionSim_a43f3141595b3d9ea5e067ce8ce74d79c}{void {\bfseries init\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$parent\-Stat)}\label{classContentionSim_a43f3141595b3d9ea5e067ce8ce74d79c}
+
+\item 
+\hypertarget{classContentionSim_a5fc392e200bc8c0acada32e838420ecc}{void {\bfseries post\-Init} ()}\label{classContentionSim_a5fc392e200bc8c0acada32e838420ecc}
+
+\item 
+\hypertarget{classContentionSim_a1cd640e573094fb670fc8b83f4a07332}{void {\bfseries enqueue} (\hyperlink{classTimingEvent}{Timing\-Event} $\ast$ev, uint64\-\_\-t cycle)}\label{classContentionSim_a1cd640e573094fb670fc8b83f4a07332}
+
+\item 
+\hypertarget{classContentionSim_aade85cbc1438a43581a34036fc79bb12}{void {\bfseries enqueue\-Synced} (\hyperlink{classTimingEvent}{Timing\-Event} $\ast$ev, uint64\-\_\-t cycle)}\label{classContentionSim_aade85cbc1438a43581a34036fc79bb12}
+
+\item 
+\hypertarget{classContentionSim_a4c06e1040f29e473b080f80fb80b8230}{void {\bfseries enqueue\-Crossing} (\hyperlink{classCrossingEvent}{Crossing\-Event} $\ast$ev, uint64\-\_\-t cycle, uint32\-\_\-t src\-Id, uint32\-\_\-t src\-Domain, uint32\-\_\-t dst\-Domain, \hyperlink{classEventRecorder}{Event\-Recorder} $\ast$ev\-Rec)}\label{classContentionSim_a4c06e1040f29e473b080f80fb80b8230}
+
+\item 
+\hypertarget{classContentionSim_a961f4d3a18597d2413188a67cb800ee5}{void {\bfseries simulate\-Phase} (uint64\-\_\-t limit)}\label{classContentionSim_a961f4d3a18597d2413188a67cb800ee5}
+
+\item 
+\hypertarget{classContentionSim_a0d5aeadd8d3270a37ef7dcf79488621d}{void {\bfseries finish} ()}\label{classContentionSim_a0d5aeadd8d3270a37ef7dcf79488621d}
+
+\item 
+\hypertarget{classContentionSim_ae9982a572df654edb1bf6a7f5f0d2197}{uint64\-\_\-t {\bfseries get\-Last\-Limit} ()}\label{classContentionSim_ae9982a572df654edb1bf6a7f5f0d2197}
+
+\item 
+\hypertarget{classContentionSim_a782a5b4f4f1d980cd781ef9b87c2c7c3}{uint64\-\_\-t {\bfseries get\-Cur\-Cycle} (uint32\-\_\-t domain)}\label{classContentionSim_a782a5b4f4f1d980cd781ef9b87c2c7c3}
+
+\item 
+\hypertarget{classContentionSim_aff58f59d88d745695f24441f08fc0eb8}{void {\bfseries set\-Prio} (uint32\-\_\-t domain, uint32\-\_\-t prio)}\label{classContentionSim_aff58f59d88d745695f24441f08fc0eb8}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+contention\-\_\-sim.\-h\item 
+contention\-\_\-sim.\-cpp\end{DoxyCompactItemize}

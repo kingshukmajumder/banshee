@@ -1,0 +1,52 @@
+\hypertarget{classTraceDriver}{\section{Trace\-Driver Class Reference}
+\label{classTraceDriver}\index{Trace\-Driver@{Trace\-Driver}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTraceDriver_ae708770486c6440a8eb8701ffd6fad50}{Trace\-Driver} (std\-::string filename, std\-::string retracefile, std\-::vector$<$ \hyperlink{classTraceDriverProxyCache}{Trace\-Driver\-Proxy\-Cache} $\ast$ $>$ \&proxies, bool \-\_\-use\-Skews, bool \-\_\-play\-Puts, bool \-\_\-play\-All\-Gets)
+\item 
+\hypertarget{classTraceDriver_aca88e790d641f617260c5ab78f0d4bda}{void {\bfseries init\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$parent\-Stat)}\label{classTraceDriver_aca88e790d641f617260c5ab78f0d4bda}
+
+\item 
+\hypertarget{classTraceDriver_a716278a5e66ad1f6667d56cc97107594}{void {\bfseries set\-Parent} (\hyperlink{classMemObject}{Mem\-Object} $\ast$\-\_\-parent)}\label{classTraceDriver_a716278a5e66ad1f6667d56cc97107594}
+
+\item 
+\hypertarget{classTraceDriver_af21744a0b4846afcfd7ccd410895203e}{uint64\-\_\-t {\bfseries invalidate} (uint32\-\_\-t child\-Id, Address line\-Addr, Inv\-Type type, bool $\ast$req\-Writeback, uint64\-\_\-t req\-Cycle, uint32\-\_\-t src\-Id)}\label{classTraceDriver_af21744a0b4846afcfd7ccd410895203e}
+
+\item 
+\hypertarget{classTraceDriver_af016df78eb21621e0ee391056e0695df}{bool {\bfseries execute\-Phase} ()}\label{classTraceDriver_af016df78eb21621e0ee391056e0695df}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classTraceDriver_ae708770486c6440a8eb8701ffd6fad50}{\index{Trace\-Driver@{Trace\-Driver}!Trace\-Driver@{Trace\-Driver}}
+\index{Trace\-Driver@{Trace\-Driver}!TraceDriver@{Trace\-Driver}}
+\subsubsection[{Trace\-Driver}]{\setlength{\rightskip}{0pt plus 5cm}Trace\-Driver\-::\-Trace\-Driver (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{filename, }
+\item[{std\-::string}]{retrace\-Filename, }
+\item[{std\-::vector$<$ {\bf Trace\-Driver\-Proxy\-Cache} $\ast$ $>$ \&}]{proxies, }
+\item[{bool}]{\-\_\-use\-Skews, }
+\item[{bool}]{\-\_\-play\-Puts, }
+\item[{bool}]{\-\_\-play\-All\-Gets}
+\end{DoxyParamCaption}
+)}}\label{classTraceDriver_ae708770486c6440a8eb8701ffd6fad50}
+\$lic\$ Copyright (C) 2012-\/2015 by Massachusetts Institute of Technology Copyright (C) 2010-\/2013 by The Board of Trustees of Stanford University
+
+This file is part of zsim.
+
+zsim is free software; you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, version 2.
+
+If you use this software in your research, we request that you reference the zsim paper (\char`\"{}\-Z\-Sim\-: Fast and Accurate Microarchitectural Simulation of
+\-Thousand-\/\-Core Systems\char`\"{}, Sanchez and Kozyrakis, I\-S\-C\-A-\/40, June 2013) as the source of the simulator in any publications that use this software, and that you send us a citation of your work.
+
+zsim is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+trace\-\_\-driver.\-h\item 
+trace\-\_\-driver.\-cpp\end{DoxyCompactItemize}

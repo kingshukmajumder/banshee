@@ -1,0 +1,37 @@
+\hypertarget{classHDF5BackendImpl}{\section{H\-D\-F5\-Backend\-Impl Class Reference}
+\label{classHDF5BackendImpl}\index{H\-D\-F5\-Backend\-Impl@{H\-D\-F5\-Backend\-Impl}}
+}
+Inheritance diagram for H\-D\-F5\-Backend\-Impl\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classHDF5BackendImpl}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classHDF5BackendImpl_a43a2ce26bf80e7bf7f8153fb9363c34c}{{\bfseries H\-D\-F5\-Backend\-Impl} (const char $\ast$\-\_\-filename, \hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$\-\_\-root\-Stat, size\-\_\-t \-\_\-bytes\-Per\-Write, bool \-\_\-skip\-Vectors, bool \-\_\-sum\-Regular\-Aggregates)}\label{classHDF5BackendImpl_a43a2ce26bf80e7bf7f8153fb9363c34c}
+
+\item 
+\hypertarget{classHDF5BackendImpl_a8d892e64826c093bcd9e456278f3422e}{void {\bfseries dump} (bool buffered)}\label{classHDF5BackendImpl_a8d892e64826c093bcd9e456278f3422e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\$lic\$ Copyright (C) 2012-\/2015 by Massachusetts Institute of Technology Copyright (C) 2010-\/2013 by The Board of Trustees of Stanford University
+
+This file is part of zsim.
+
+zsim is free software; you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, version 2.
+
+If you use this software in your research, we request that you reference the zsim paper (\char`\"{}\-Z\-Sim\-: Fast and Accurate Microarchitectural Simulation of
+\-Thousand-\/\-Core Systems\char`\"{}, Sanchez and Kozyrakis, I\-S\-C\-A-\/40, June 2013) as the source of the simulator in any publications that use this software, and that you send us a citation of your work.
+
+zsim is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. Implements the H\-D\-F5 backend. Creates one big table in the file, and writes one row per dump. N\-O\-T\-E\-: Because dump may be called from multiple processes, we close and open the H\-D\-F5 file every dump. This is inefficient, but dumps are not that common anyhow, and we get the ability to read hdf5 files mid-\/simulation. (alternatively, we could have an extra thread exclusively dedicated to writing stats). 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+hdf5\-\_\-stats.\-cpp\end{DoxyCompactItemize}

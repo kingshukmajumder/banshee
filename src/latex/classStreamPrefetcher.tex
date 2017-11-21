@@ -1,0 +1,42 @@
+\hypertarget{classStreamPrefetcher}{\section{Stream\-Prefetcher Class Reference}
+\label{classStreamPrefetcher}\index{Stream\-Prefetcher@{Stream\-Prefetcher}}
+}
+Inheritance diagram for Stream\-Prefetcher\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classStreamPrefetcher}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classStreamPrefetcher_a7456b6d9da6bb4ac1b726aeb88ec5a93}{{\bfseries Stream\-Prefetcher} (const g\-\_\-string \&\-\_\-name, uint32\-\_\-t \-\_\-num\-Buffers, bool \-\_\-partition\-Buffers)}\label{classStreamPrefetcher_a7456b6d9da6bb4ac1b726aeb88ec5a93}
+
+\item 
+\hypertarget{classStreamPrefetcher_ad0a16eed87db01ffcbc42a45824e65fb}{void {\bfseries init\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$parent\-Stat)}\label{classStreamPrefetcher_ad0a16eed87db01ffcbc42a45824e65fb}
+
+\item 
+\hypertarget{classStreamPrefetcher_a521ea99034db4504d9a19df50394a885}{const char $\ast$ {\bfseries get\-Name} ()}\label{classStreamPrefetcher_a521ea99034db4504d9a19df50394a885}
+
+\item 
+\hypertarget{classStreamPrefetcher_a662f4df26d0af098250b021c4fb69ebf}{void {\bfseries set\-Parents} (uint32\-\_\-t \-\_\-child\-Id, const \hyperlink{classg__vector}{g\-\_\-vector}$<$ \hyperlink{classMemObject}{Mem\-Object} $\ast$ $>$ \&parents, \hyperlink{classNetwork}{Network} $\ast$network)}\label{classStreamPrefetcher_a662f4df26d0af098250b021c4fb69ebf}
+
+\item 
+\hypertarget{classStreamPrefetcher_a4480f864cc0e916041f3aba6a2e38be9}{void {\bfseries set\-Children} (const \hyperlink{classg__vector}{g\-\_\-vector}$<$ \hyperlink{classBaseCache}{Base\-Cache} $\ast$ $>$ \&children, \hyperlink{classNetwork}{Network} $\ast$network)}\label{classStreamPrefetcher_a4480f864cc0e916041f3aba6a2e38be9}
+
+\item 
+\hypertarget{classStreamPrefetcher_a0e2d09fc748974655cdd3b23591d0f9b}{uint64\-\_\-t {\bfseries access} (\hyperlink{structMemReq}{Mem\-Req} \&req)}\label{classStreamPrefetcher_a0e2d09fc748974655cdd3b23591d0f9b}
+
+\item 
+\hypertarget{classStreamPrefetcher_a7c1cce2c7be8f10bec474b943765da71}{uint64\-\_\-t {\bfseries invalidate} (const \hyperlink{structInvReq}{Inv\-Req} \&req)}\label{classStreamPrefetcher_a7c1cce2c7be8f10bec474b943765da71}
+
+\item 
+\hypertarget{classStreamPrefetcher_ab297aec9a7706566d03203b20a617f39}{void {\bfseries simulate\-Prefetch\-Response} (\hyperlink{classPrefetchResponseEvent}{Prefetch\-Response\-Event} $\ast$ev, uint64\-\_\-t cycle)}\label{classStreamPrefetcher_ab297aec9a7706566d03203b20a617f39}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+prefetcher.\-h\item 
+prefetcher.\-cpp\end{DoxyCompactItemize}

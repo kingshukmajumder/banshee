@@ -1,0 +1,164 @@
+\hypertarget{classMTRand}{\section{M\-T\-Rand Class Reference}
+\label{classMTRand}\index{M\-T\-Rand@{M\-T\-Rand}}
+}
+
+
+{\ttfamily \#include $<$mtrand.\-h$>$}
+
+Inheritance diagram for M\-T\-Rand\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMTRand}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries N} = 624
+ \}
+\item 
+enum \{ {\bfseries S\-A\-V\-E} = N + 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMTRand_a60104c123a240826273baafe99238c9f}{{\bfseries M\-T\-Rand} (const uint64\-\_\-t one\-Seed)}\label{classMTRand_a60104c123a240826273baafe99238c9f}
+
+\item 
+\hypertarget{classMTRand_a8e6fe5b4b8a3e07cc32530854dd114ec}{{\bfseries M\-T\-Rand} (uint64\-\_\-t $\ast$const big\-Seed, uint64\-\_\-t const seed\-Length=N)}\label{classMTRand_a8e6fe5b4b8a3e07cc32530854dd114ec}
+
+\item 
+\hypertarget{classMTRand_aff69d4a4ec88475bab03a295e8fb0f60}{{\bfseries M\-T\-Rand} (const \hyperlink{classMTRand}{M\-T\-Rand} \&o)}\label{classMTRand_aff69d4a4ec88475bab03a295e8fb0f60}
+
+\item 
+\hypertarget{classMTRand_ad36da78bd8155920a5cb7d85eaae0ade}{uint64\-\_\-t {\bfseries rand\-Int} ()}\label{classMTRand_ad36da78bd8155920a5cb7d85eaae0ade}
+
+\item 
+\hypertarget{classMTRand_a7b291ee28dbc624ca2d411f19c41d3e9}{uint64\-\_\-t {\bfseries rand\-Int} (const uint64\-\_\-t n)}\label{classMTRand_a7b291ee28dbc624ca2d411f19c41d3e9}
+
+\item 
+\hypertarget{classMTRand_a76d129a2d850c24ff4a0613f299cf3a5}{double {\bfseries rand} ()}\label{classMTRand_a76d129a2d850c24ff4a0613f299cf3a5}
+
+\item 
+\hypertarget{classMTRand_aa4fe82fc27fd81414ce7554093a9766b}{double {\bfseries rand} (const double n)}\label{classMTRand_aa4fe82fc27fd81414ce7554093a9766b}
+
+\item 
+\hypertarget{classMTRand_afd05e468983b3a3d66ce0f403bd666af}{double {\bfseries rand\-Exc} ()}\label{classMTRand_afd05e468983b3a3d66ce0f403bd666af}
+
+\item 
+\hypertarget{classMTRand_aa1e89d6c7ac8737567b3ccf8fe70b6de}{double {\bfseries rand\-Exc} (const double n)}\label{classMTRand_aa1e89d6c7ac8737567b3ccf8fe70b6de}
+
+\item 
+\hypertarget{classMTRand_a4d3a475aa72fe6d1a6d7d9e16d6a732e}{double {\bfseries rand\-Dbl\-Exc} ()}\label{classMTRand_a4d3a475aa72fe6d1a6d7d9e16d6a732e}
+
+\item 
+\hypertarget{classMTRand_a1a81d8f00de8f553d4b8626d64e1c544}{double {\bfseries rand\-Dbl\-Exc} (const double n)}\label{classMTRand_a1a81d8f00de8f553d4b8626d64e1c544}
+
+\item 
+\hypertarget{classMTRand_abbb87a08d622d58fdee0eea4cb5471a0}{double {\bfseries operator()} ()}\label{classMTRand_abbb87a08d622d58fdee0eea4cb5471a0}
+
+\item 
+\hypertarget{classMTRand_a15f4daf79febbe4ff43c3e6ce2c4fcbe}{double {\bfseries rand53} ()}\label{classMTRand_a15f4daf79febbe4ff43c3e6ce2c4fcbe}
+
+\item 
+\hypertarget{classMTRand_a4c284f626b6d40a0367ff2a949ea1944}{double {\bfseries rand\-Norm} (const double mean=0.\-0, const double stddev=1.\-0)}\label{classMTRand_a4c284f626b6d40a0367ff2a949ea1944}
+
+\item 
+\hypertarget{classMTRand_aa14afdf05231b303915d3ede9083933c}{void {\bfseries seed} (const uint64\-\_\-t one\-Seed)}\label{classMTRand_aa14afdf05231b303915d3ede9083933c}
+
+\item 
+\hypertarget{classMTRand_a685897ab29cb57074ddb663f2aaf3571}{void {\bfseries seed} (uint64\-\_\-t $\ast$const big\-Seed, const uint64\-\_\-t seed\-Length=N)}\label{classMTRand_a685897ab29cb57074ddb663f2aaf3571}
+
+\item 
+\hypertarget{classMTRand_ad88ea3363d55bafb62826bbd130279c2}{void {\bfseries seed} ()}\label{classMTRand_ad88ea3363d55bafb62826bbd130279c2}
+
+\item 
+\hypertarget{classMTRand_ac3dc3ece794feff49ba83ed2fa7a4da2}{void {\bfseries save} (uint64\-\_\-t $\ast$save\-Array) const }\label{classMTRand_ac3dc3ece794feff49ba83ed2fa7a4da2}
+
+\item 
+\hypertarget{classMTRand_add6ab0d26a0edeedd46853accae4eb1a}{void {\bfseries load} (uint64\-\_\-t $\ast$const load\-Array)}\label{classMTRand_add6ab0d26a0edeedd46853accae4eb1a}
+
+\item 
+\hypertarget{classMTRand_a3a6eb21add6f6ef4ce2d3280f2518521}{\hyperlink{classMTRand}{M\-T\-Rand} \& {\bfseries operator=} (const \hyperlink{classMTRand}{M\-T\-Rand} \&o)}\label{classMTRand_a3a6eb21add6f6ef4ce2d3280f2518521}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries M} = 397
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMTRand_a0098d14773e1be9c50224cfbc5eb0df9}{void {\bfseries initialize} (const uint64\-\_\-t one\-Seed)}\label{classMTRand_a0098d14773e1be9c50224cfbc5eb0df9}
+
+\item 
+\hypertarget{classMTRand_a1d5fcb69d83f4d2fd653883c8352f86c}{void {\bfseries reload} ()}\label{classMTRand_a1d5fcb69d83f4d2fd653883c8352f86c}
+
+\item 
+\hypertarget{classMTRand_ad4a7632a7738a3b7fcf8dc3a082f4bca}{uint64\-\_\-t {\bfseries hi\-Bit} (const uint64\-\_\-t u) const }\label{classMTRand_ad4a7632a7738a3b7fcf8dc3a082f4bca}
+
+\item 
+\hypertarget{classMTRand_a1cd2fc67f5bbcd20138d34772e2e5816}{uint64\-\_\-t {\bfseries lo\-Bit} (const uint64\-\_\-t u) const }\label{classMTRand_a1cd2fc67f5bbcd20138d34772e2e5816}
+
+\item 
+\hypertarget{classMTRand_ad69ec4672916b2fb55f6b10d71d15515}{uint64\-\_\-t {\bfseries lo\-Bits} (const uint64\-\_\-t u) const }\label{classMTRand_ad69ec4672916b2fb55f6b10d71d15515}
+
+\item 
+\hypertarget{classMTRand_a27a04b4c5852664be5da01569678725c}{uint64\-\_\-t {\bfseries mix\-Bits} (const uint64\-\_\-t u, const uint64\-\_\-t v) const }\label{classMTRand_a27a04b4c5852664be5da01569678725c}
+
+\item 
+\hypertarget{classMTRand_a718b184ca793fa2dfde467c7c9c70892}{uint64\-\_\-t {\bfseries magic} (const uint64\-\_\-t u) const }\label{classMTRand_a718b184ca793fa2dfde467c7c9c70892}
+
+\item 
+\hypertarget{classMTRand_a6d191303b615284e333378edfea1d1d7}{uint64\-\_\-t {\bfseries twist} (const uint64\-\_\-t m, const uint64\-\_\-t s0, const uint64\-\_\-t s1) const }\label{classMTRand_a6d191303b615284e333378edfea1d1d7}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMTRand_a1b1914765ae18effdd454ee5dc490855}{static uint64\-\_\-t {\bfseries hash} (time\-\_\-t t, clock\-\_\-t c)}\label{classMTRand_a1b1914765ae18effdd454ee5dc490855}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMTRand_ae78c2072cf0839ad367d3fedc2bb196e}{uint64\-\_\-t {\bfseries state} \mbox{[}N\mbox{]}}\label{classMTRand_ae78c2072cf0839ad367d3fedc2bb196e}
+
+\item 
+\hypertarget{classMTRand_a9710904ac4bfaf50aa058978f134e96b}{uint64\-\_\-t $\ast$ {\bfseries p\-Next}}\label{classMTRand_a9710904ac4bfaf50aa058978f134e96b}
+
+\item 
+\hypertarget{classMTRand_a98eabf568c88f121e44f487397f32495}{int {\bfseries left}}\label{classMTRand_a98eabf568c88f121e44f487397f32495}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMTRand_a059061d50a1e54ee3067d4e1dbdd7c64}{std\-::ostream \& {\bfseries operator$<$$<$} (std\-::ostream \&os, const \hyperlink{classMTRand}{M\-T\-Rand} \&mtrand)}\label{classMTRand_a059061d50a1e54ee3067d4e1dbdd7c64}
+
+\item 
+\hypertarget{classMTRand_a45b02a702835a3be42171c5c2dc79b2d}{std\-::istream \& {\bfseries operator$>$$>$} (std\-::istream \&is, \hyperlink{classMTRand}{M\-T\-Rand} \&mtrand)}\label{classMTRand_a45b02a702835a3be42171c5c2dc79b2d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\$lic\$ Copyright (C) 2012-\/2015 by Massachusetts Institute of Technology Copyright (C) 2010-\/2013 by The Board of Trustees of Stanford University
+
+This file is part of zsim.
+
+zsim is free software; you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, version 2.
+
+If you use this software in your research, we request that you reference the zsim paper (\char`\"{}\-Z\-Sim\-: Fast and Accurate Microarchitectural Simulation of
+\-Thousand-\/\-Core Systems\char`\"{}, Sanchez and Kozyrakis, I\-S\-C\-A-\/40, June 2013) as the source of the simulator in any publications that use this software, and that you send us a citation of your work.
+
+zsim is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+mtrand.\-h\end{DoxyCompactItemize}

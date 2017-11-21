@@ -1,0 +1,253 @@
+\hypertarget{classMemRankBase}{\section{Mem\-Rank\-Base Class Reference}
+\label{classMemRankBase}\index{Mem\-Rank\-Base@{Mem\-Rank\-Base}}
+}
+Inheritance diagram for Mem\-Rank\-Base\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMemRankBase}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMemRankBase_aacf0992ac12f1a10c2159b7de3f8b464}{Mem\-Rank\-Base} (uint32\-\_\-t \-\_\-my\-Id, uint32\-\_\-t \-\_\-parent\-Id, uint32\-\_\-t \-\_\-bank\-Count)
+\item 
+\hypertarget{classMemRankBase_af7a73da8943b5dacc9847f35cc51884d}{virtual void {\bfseries access} (uint64\-\_\-t access\-Cycle, uint64\-\_\-t issued\-Cycle, uint32\-\_\-t row, uint32\-\_\-t col, uint32\-\_\-t bank, Mem\-Access\-Type type)}\label{classMemRankBase_af7a73da8943b5dacc9847f35cc51884d}
+
+\item 
+\hypertarget{classMemRankBase_a7ba9db3f4f52515794e8bad3df7bc92c}{virtual void {\bfseries refresh} (uint64\-\_\-t last\-Cycle)}\label{classMemRankBase_a7ba9db3f4f52515794e8bad3df7bc92c}
+
+\item 
+\hypertarget{classMemRankBase_a8261bb5be377b057348a60817f0b0b42}{uint32\-\_\-t {\bfseries Get\-Bank\-Count} (void)}\label{classMemRankBase_a8261bb5be377b057348a60817f0b0b42}
+
+\item 
+\hypertarget{classMemRankBase_accf69f66b82d81fcccc82c4fe20aa510}{uint32\-\_\-t {\bfseries Get\-Last\-Bank} (void)}\label{classMemRankBase_accf69f66b82d81fcccc82c4fe20aa510}
+
+\item 
+\hypertarget{classMemRankBase_a6f58b7856b52d6d711b8904e05e299fc}{uint32\-\_\-t {\bfseries Get\-Last\-Row} (uint32\-\_\-t bank)}\label{classMemRankBase_a6f58b7856b52d6d711b8904e05e299fc}
+
+\item 
+\hypertarget{classMemRankBase_ade57246375526c06def01af6a2273c3e}{Mem\-Access\-Type {\bfseries Get\-Last\-Type} (uint32\-\_\-t bank)}\label{classMemRankBase_ade57246375526c06def01af6a2273c3e}
+
+\item 
+\hypertarget{classMemRankBase_a2da4b2db453b09821f4ba51f8e0d29f4}{uint64\-\_\-t {\bfseries Get\-Last\-Rd\-Wr\-Cycle} (uint32\-\_\-t bank)}\label{classMemRankBase_a2da4b2db453b09821f4ba51f8e0d29f4}
+
+\item 
+\hypertarget{classMemRankBase_a53c7056c8456da311f8569353564c69f}{uint64\-\_\-t {\bfseries Get\-Last\-Refresh\-Cycle} (void)}\label{classMemRankBase_a53c7056c8456da311f8569353564c69f}
+
+\item 
+\hypertarget{classMemRankBase_a523c401cf2c2a3a005276cc6c2517706}{bool {\bfseries Get\-Bank\-Open} (uint32\-\_\-t bank)}\label{classMemRankBase_a523c401cf2c2a3a005276cc6c2517706}
+
+\item 
+\hypertarget{classMemRankBase_a273428848d725f6f7abecf02133597b6}{void {\bfseries Set\-Bank\-Open} (uint32\-\_\-t bank)}\label{classMemRankBase_a273428848d725f6f7abecf02133597b6}
+
+\item 
+\hypertarget{classMemRankBase_aa57f8d92c27b9a4ffca22b5f869160b6}{void {\bfseries Set\-Bank\-Close} (uint32\-\_\-t bank)}\label{classMemRankBase_aa57f8d92c27b9a4ffca22b5f869160b6}
+
+\item 
+\hypertarget{classMemRankBase_a56e8e7710a4cbbde65e6c84165e6dd2d}{uint32\-\_\-t {\bfseries Get\-Active\-Bank\-Count} (void)}\label{classMemRankBase_a56e8e7710a4cbbde65e6c84165e6dd2d}
+
+\item 
+\hypertarget{classMemRankBase_aaae3776b41abb250ee72feb4077ad250}{uint64\-\_\-t {\bfseries Get\-Last\-Access\-Cycle} (void)}\label{classMemRankBase_aaae3776b41abb250ee72feb4077ad250}
+
+\item 
+\hypertarget{classMemRankBase_a6d33610172f9848fbf03008cc0362662}{uint64\-\_\-t {\bfseries Get\-Activate\-Count} (void)}\label{classMemRankBase_a6d33610172f9848fbf03008cc0362662}
+
+\item 
+\hypertarget{classMemRankBase_afd3a301b727b276db60a434c58efbb46}{void {\bfseries Inc\-Activate\-Count} (void)}\label{classMemRankBase_afd3a301b727b276db60a434c58efbb46}
+
+\item 
+\hypertarget{classMemRankBase_a53dd66ab1ae1ef7aaffa8fb97962e7b3}{uint32\-\_\-t {\bfseries Get\-Precharge\-Count} (void)}\label{classMemRankBase_a53dd66ab1ae1ef7aaffa8fb97962e7b3}
+
+\item 
+\hypertarget{classMemRankBase_a46f676f1a91434432dc9ce27e4a6b580}{void {\bfseries Inc\-Precharge\-Count} (void)}\label{classMemRankBase_a46f676f1a91434432dc9ce27e4a6b580}
+
+\item 
+\hypertarget{classMemRankBase_a05fb2ad9e92604c6fa452f2d391fc68b}{uint64\-\_\-t {\bfseries Get\-Read\-Burst\-Count} (void)}\label{classMemRankBase_a05fb2ad9e92604c6fa452f2d391fc68b}
+
+\item 
+\hypertarget{classMemRankBase_a1d167f969fd02e04f26d768545983d4c}{void {\bfseries Inc\-Read\-Burst\-Count} (void)}\label{classMemRankBase_a1d167f969fd02e04f26d768545983d4c}
+
+\item 
+\hypertarget{classMemRankBase_a1bc22aa65921f6a6991b6caa687101cf}{uint64\-\_\-t {\bfseries Get\-Write\-Burst\-Count} (void)}\label{classMemRankBase_a1bc22aa65921f6a6991b6caa687101cf}
+
+\item 
+\hypertarget{classMemRankBase_a1aec1d49d04e636233e9422f177d4690}{void {\bfseries Inc\-Write\-Burst\-Count} (void)}\label{classMemRankBase_a1aec1d49d04e636233e9422f177d4690}
+
+\item 
+\hypertarget{classMemRankBase_ac8fe72cb3949c1bed48d8ebcf3d39d2d}{uint64\-\_\-t {\bfseries Get\-Idle\-Power\-Down\-Cycle} (void)}\label{classMemRankBase_ac8fe72cb3949c1bed48d8ebcf3d39d2d}
+
+\item 
+\hypertarget{classMemRankBase_a9b844679d880587e58e3a764593fe8f1}{uint64\-\_\-t {\bfseries Get\-Actv\-Power\-Down\-Cycle} (void)}\label{classMemRankBase_a9b844679d880587e58e3a764593fe8f1}
+
+\item 
+\hypertarget{classMemRankBase_ae9b9b85028133dc860d765b0ad19544f}{uint64\-\_\-t {\bfseries Get\-Idle\-Standby\-Cycle} (void)}\label{classMemRankBase_ae9b9b85028133dc860d765b0ad19544f}
+
+\item 
+\hypertarget{classMemRankBase_a329967c85ffade127c3385cc06f49803}{uint64\-\_\-t {\bfseries Get\-Prev\-Idle\-Power\-Down\-Cycle} (void)}\label{classMemRankBase_a329967c85ffade127c3385cc06f49803}
+
+\item 
+\hypertarget{classMemRankBase_a1065074c17d3aa40095762f827c79592}{uint64\-\_\-t {\bfseries Get\-Prev\-Actv\-Power\-Down\-Cycle} (void)}\label{classMemRankBase_a1065074c17d3aa40095762f827c79592}
+
+\item 
+\hypertarget{classMemRankBase_a5e6065bf843b4448bd36843ca12de7c1}{uint64\-\_\-t {\bfseries Get\-Prev\-Idle\-Standby\-Cycle} (void)}\label{classMemRankBase_a5e6065bf843b4448bd36843ca12de7c1}
+
+\item 
+\hypertarget{classMemRankBase_a9bcf1119991fea47e6353a183a055f1b}{void {\bfseries Set\-Idle\-Power\-Down\-Cycle} (uint64\-\_\-t cycle)}\label{classMemRankBase_a9bcf1119991fea47e6353a183a055f1b}
+
+\item 
+\hypertarget{classMemRankBase_a9da28403ebdbd8dc07d48da72fcbdbc1}{void {\bfseries Set\-Actv\-Power\-Down\-Cycle} (uint64\-\_\-t cycle)}\label{classMemRankBase_a9da28403ebdbd8dc07d48da72fcbdbc1}
+
+\item 
+\hypertarget{classMemRankBase_a18cd5cda2b0a251514e4d9352d500501}{void {\bfseries Set\-Idle\-Standby\-Cycle} (uint64\-\_\-t cycle)}\label{classMemRankBase_a18cd5cda2b0a251514e4d9352d500501}
+
+\item 
+\hypertarget{classMemRankBase_ac529c40189c3c3e1afd4cea23967d6c8}{void {\bfseries Save\-Background\-Cycles} (void)}\label{classMemRankBase_ac529c40189c3c3e1afd4cea23967d6c8}
+
+\item 
+\hypertarget{classMemRankBase_a2e83901b9c88cf3fd75eab94db30c14b}{void {\bfseries Set\-Refresh\-Num} (uint32\-\_\-t num)}\label{classMemRankBase_a2e83901b9c88cf3fd75eab94db30c14b}
+
+\item 
+\hypertarget{classMemRankBase_ae40cd8704dd8b1d50ca359dccdbedbff}{uint32\-\_\-t {\bfseries Get\-Refresh\-Num} (void)}\label{classMemRankBase_ae40cd8704dd8b1d50ca359dccdbedbff}
+
+\item 
+\hypertarget{classMemRankBase_ab2b3338aee684271469fbcb008f09834}{void {\bfseries Set\-Access\-In\-Refresh} (uint32\-\_\-t num)}\label{classMemRankBase_ab2b3338aee684271469fbcb008f09834}
+
+\item 
+\hypertarget{classMemRankBase_ac923937912dd8d601e4390b8a0dd098f}{uint32\-\_\-t {\bfseries Get\-Access\-In\-Refresh} (void)}\label{classMemRankBase_ac923937912dd8d601e4390b8a0dd098f}
+
+\item 
+\hypertarget{classMemRankBase_a853d565b6036ec7c856e0d31f8e0a5dd}{uint64\-\_\-t {\bfseries Get\-Last\-Act\-Cycle} (uint32\-\_\-t bank)}\label{classMemRankBase_a853d565b6036ec7c856e0d31f8e0a5dd}
+
+\item 
+\hypertarget{classMemRankBase_a5901d260fdfffc68ff384dc2d73b6eb9}{void {\bfseries Set\-Last\-Act\-Cycle} (uint32\-\_\-t bank, uint64\-\_\-t cycle)}\label{classMemRankBase_a5901d260fdfffc68ff384dc2d73b6eb9}
+
+\item 
+\hypertarget{classMemRankBase_a0861380baea379e2285684a16b4f5fa0}{uint64\-\_\-t {\bfseries Get\-Last\-Pre\-Cycle} (uint32\-\_\-t bank)}\label{classMemRankBase_a0861380baea379e2285684a16b4f5fa0}
+
+\item 
+\hypertarget{classMemRankBase_a5af10b120b0e024cef6a604502a73780}{void {\bfseries Set\-Last\-Pre\-Cycle} (uint32\-\_\-t bank, uint64\-\_\-t cycle)}\label{classMemRankBase_a5af10b120b0e024cef6a604502a73780}
+
+\item 
+\hypertarget{classMemRankBase_afc20190d248a82987c4807713a0b98ee}{uint64\-\_\-t {\bfseries Get\-F\-A\-W\-Cycle} (void)}\label{classMemRankBase_afc20190d248a82987c4807713a0b98ee}
+
+\item 
+\hypertarget{classMemRankBase_aee6e9d1eb430ad2778e4d15a664104e5}{void {\bfseries Set\-F\-A\-W\-Cycle} (uint32\-\_\-t bank, uint64\-\_\-t cycle)}\label{classMemRankBase_aee6e9d1eb430ad2778e4d15a664104e5}
+
+\item 
+\hypertarget{classMemRankBase_abaed63f78841d8ff3b17c0d118947869}{uint64\-\_\-t {\bfseries Get\-F\-A\-W\-Cycle} (uint32\-\_\-t bank)}\label{classMemRankBase_abaed63f78841d8ff3b17c0d118947869}
+
+\item 
+\hypertarget{classMemRankBase_abbdadf20ed4c1a1ce485feff4bff611f}{void {\bfseries Set\-F\-A\-W\-Cycle} (uint64\-\_\-t cycle)}\label{classMemRankBase_abbdadf20ed4c1a1ce485feff4bff611f}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMemRankBase_a4b904ede9e32196cb5dcf34098029f01}{uint32\-\_\-t {\bfseries my\-Id}}\label{classMemRankBase_a4b904ede9e32196cb5dcf34098029f01}
+
+\item 
+\hypertarget{classMemRankBase_a5cb3737f7dfc01c334f7556646f3680a}{uint32\-\_\-t {\bfseries parent\-Id}}\label{classMemRankBase_a5cb3737f7dfc01c334f7556646f3680a}
+
+\item 
+\hypertarget{classMemRankBase_a17c1ad412fec857afc886e70d2cc7bbc}{uint32\-\_\-t {\bfseries bank\-Count}}\label{classMemRankBase_a17c1ad412fec857afc886e70d2cc7bbc}
+
+\item 
+\hypertarget{classMemRankBase_a381d1dd95e2577b15055ed7d8cdc258f}{uint32\-\_\-t {\bfseries last\-Bank}}\label{classMemRankBase_a381d1dd95e2577b15055ed7d8cdc258f}
+
+\item 
+\hypertarget{classMemRankBase_a328af2885e948b30f47cb4b7a24871eb}{uint64\-\_\-t {\bfseries last\-Access\-Cycle}}\label{classMemRankBase_a328af2885e948b30f47cb4b7a24871eb}
+
+\item 
+\hypertarget{classMemRankBase_a98b3bfc0bdd03e7193fc5f8ea5711d53}{uint64\-\_\-t {\bfseries last\-Refresh\-Cycle}}\label{classMemRankBase_a98b3bfc0bdd03e7193fc5f8ea5711d53}
+
+\item 
+\hypertarget{classMemRankBase_ab58cde59becf2491a58d30383cc72690}{uint32\-\_\-t {\bfseries refresh\-Num}}\label{classMemRankBase_ab58cde59becf2491a58d30383cc72690}
+
+\item 
+\hypertarget{classMemRankBase_a35d0773a1d81cdf96cd4f7b98777b694}{uint32\-\_\-t {\bfseries access\-In\-Refresh}}\label{classMemRankBase_a35d0773a1d81cdf96cd4f7b98777b694}
+
+\item 
+\hypertarget{classMemRankBase_ad10402fd62d14f85eded3334396d1fe2}{uint32\-\_\-t {\bfseries t\-F\-A\-W\-Index}}\label{classMemRankBase_ad10402fd62d14f85eded3334396d1fe2}
+
+\item 
+\hypertarget{classMemRankBase_a27213bb3cadac04866f19e0c449dc0f4}{bool $\ast$ {\bfseries bankinfo}}\label{classMemRankBase_a27213bb3cadac04866f19e0c449dc0f4}
+
+\item 
+\hypertarget{classMemRankBase_a790705e1fb52897840cddfad9908fdd9}{uint32\-\_\-t $\ast$ {\bfseries last\-Row}}\label{classMemRankBase_a790705e1fb52897840cddfad9908fdd9}
+
+\item 
+\hypertarget{classMemRankBase_abcaf7486bd2a20f7618339bd1c491aeb}{Mem\-Access\-Type $\ast$ {\bfseries last\-Type}}\label{classMemRankBase_abcaf7486bd2a20f7618339bd1c491aeb}
+
+\item 
+\hypertarget{classMemRankBase_adf40e7012c3b3c4461d1321555271ba1}{uint64\-\_\-t $\ast$ {\bfseries last\-Act\-Cycle}}\label{classMemRankBase_adf40e7012c3b3c4461d1321555271ba1}
+
+\item 
+\hypertarget{classMemRankBase_a6c6d69f740923bcfb1e755ca30f6f9f8}{uint64\-\_\-t $\ast$ {\bfseries last\-Rd\-Wr\-Cycle}}\label{classMemRankBase_a6c6d69f740923bcfb1e755ca30f6f9f8}
+
+\item 
+\hypertarget{classMemRankBase_a66308e4d886958e32c3604c6cfded9cc}{uint64\-\_\-t $\ast$ {\bfseries last\-Pre\-Cycle}}\label{classMemRankBase_a66308e4d886958e32c3604c6cfded9cc}
+
+\item 
+\hypertarget{classMemRankBase_aec365e3f834f4356bcfe4d3f4c949385}{uint64\-\_\-t $\ast$ {\bfseries t\-F\-A\-W\-Cycle}}\label{classMemRankBase_aec365e3f834f4356bcfe4d3f4c949385}
+
+\item 
+\hypertarget{classMemRankBase_a67819850268b19d64ddb41eb44220076}{uint64\-\_\-t {\bfseries activate\-Count}}\label{classMemRankBase_a67819850268b19d64ddb41eb44220076}
+
+\item 
+\hypertarget{classMemRankBase_affd7cafb6bbd6d7d20b1bec976861cfe}{uint64\-\_\-t {\bfseries precharge\-Count}}\label{classMemRankBase_affd7cafb6bbd6d7d20b1bec976861cfe}
+
+\item 
+\hypertarget{classMemRankBase_a05a4de4d7390478a9153eb94e63cfd51}{uint64\-\_\-t {\bfseries read\-Burst\-Count}}\label{classMemRankBase_a05a4de4d7390478a9153eb94e63cfd51}
+
+\item 
+\hypertarget{classMemRankBase_a8c3036220bb8ff452c5e1bed6b6ee709}{uint64\-\_\-t {\bfseries write\-Burst\-Count}}\label{classMemRankBase_a8c3036220bb8ff452c5e1bed6b6ee709}
+
+\item 
+\hypertarget{classMemRankBase_a316fcd3ef37709cfb0f827abe2949724}{uint64\-\_\-t {\bfseries idle\-Power\-Down\-Cycle}}\label{classMemRankBase_a316fcd3ef37709cfb0f827abe2949724}
+
+\item 
+\hypertarget{classMemRankBase_a2966a85cc66062a6a12783f0e8f89cdd}{uint64\-\_\-t {\bfseries actv\-Power\-Down\-Cycle}}\label{classMemRankBase_a2966a85cc66062a6a12783f0e8f89cdd}
+
+\item 
+\hypertarget{classMemRankBase_a533403bcda379d21265690a65a02749b}{uint64\-\_\-t {\bfseries idle\-Standby\-Cycle}}\label{classMemRankBase_a533403bcda379d21265690a65a02749b}
+
+\item 
+\hypertarget{classMemRankBase_aa889c9c66213e5ad9f2619d3f2370a35}{uint64\-\_\-t {\bfseries prev\-Idle\-Power\-Down\-Cycle}}\label{classMemRankBase_aa889c9c66213e5ad9f2619d3f2370a35}
+
+\item 
+\hypertarget{classMemRankBase_a5afbc0f6b956ded22bd2574a1cef3b9b}{uint64\-\_\-t {\bfseries prev\-Actv\-Power\-Down\-Cycle}}\label{classMemRankBase_a5afbc0f6b956ded22bd2574a1cef3b9b}
+
+\item 
+\hypertarget{classMemRankBase_aa7abe1439d05ac395a8a72ff0adbe6fa}{uint64\-\_\-t {\bfseries prev\-Idle\-Standby\-Cycle}}\label{classMemRankBase_aa7abe1439d05ac395a8a72ff0adbe6fa}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMemRankBase_aacf0992ac12f1a10c2159b7de3f8b464}{\index{Mem\-Rank\-Base@{Mem\-Rank\-Base}!Mem\-Rank\-Base@{Mem\-Rank\-Base}}
+\index{Mem\-Rank\-Base@{Mem\-Rank\-Base}!MemRankBase@{Mem\-Rank\-Base}}
+\subsubsection[{Mem\-Rank\-Base}]{\setlength{\rightskip}{0pt plus 5cm}Mem\-Rank\-Base\-::\-Mem\-Rank\-Base (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{\-\_\-my\-Id, }
+\item[{uint32\-\_\-t}]{\-\_\-parent\-Id, }
+\item[{uint32\-\_\-t}]{\-\_\-bank\-Count}
+\end{DoxyParamCaption}
+)}}\label{classMemRankBase_aacf0992ac12f1a10c2159b7de3f8b464}
+\$lic\$ Copyright (C) 2012-\/2015 by Massachusetts Institute of Technology Copyright (C) 2010-\/2013 by The Board of Trustees of Stanford University
+
+This file is part of zsim.
+
+zsim is free software; you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, version 2.
+
+If you use this software in your research, we request that you reference the zsim paper (\char`\"{}\-Z\-Sim\-: Fast and Accurate Microarchitectural Simulation of
+\-Thousand-\/\-Core Systems\char`\"{}, Sanchez and Kozyrakis, I\-S\-C\-A-\/40, June 2013) as the source of the simulator in any publications that use this software, and that you send us a citation of your work.
+
+zsim is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+detailed\-\_\-mem.\-h\item 
+detailed\-\_\-mem.\-cpp\end{DoxyCompactItemize}

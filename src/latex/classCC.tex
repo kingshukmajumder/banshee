@@ -1,0 +1,71 @@
+\hypertarget{classCC}{\section{C\-C Class Reference}
+\label{classCC}\index{C\-C@{C\-C}}
+}
+
+
+{\ttfamily \#include $<$coherence\-\_\-ctrls.\-h$>$}
+
+Inheritance diagram for C\-C\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classCC}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCC_a6b9d8a6acc32a2c279601078105ba94a}{virtual void {\bfseries set\-Parents} (uint32\-\_\-t child\-Id, const \hyperlink{classg__vector}{g\-\_\-vector}$<$ \hyperlink{classMemObject}{Mem\-Object} $\ast$ $>$ \&parents, \hyperlink{classNetwork}{Network} $\ast$network)=0}\label{classCC_a6b9d8a6acc32a2c279601078105ba94a}
+
+\item 
+\hypertarget{classCC_adcf73db25d1a7f19d875702cbd7d8da9}{virtual void {\bfseries set\-Children} (const \hyperlink{classg__vector}{g\-\_\-vector}$<$ \hyperlink{classBaseCache}{Base\-Cache} $\ast$ $>$ \&children, \hyperlink{classNetwork}{Network} $\ast$network)=0}\label{classCC_adcf73db25d1a7f19d875702cbd7d8da9}
+
+\item 
+\hypertarget{classCC_ad7b4e368967adaaab4fa63d5959ddbfe}{virtual void {\bfseries init\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$cache\-Stat)=0}\label{classCC_ad7b4e368967adaaab4fa63d5959ddbfe}
+
+\item 
+\hypertarget{classCC_a9637d8220e3588e4b7fd0460b1d2475a}{virtual bool {\bfseries start\-Access} (\hyperlink{structMemReq}{Mem\-Req} \&req)=0}\label{classCC_a9637d8220e3588e4b7fd0460b1d2475a}
+
+\item 
+\hypertarget{classCC_acca766f3f8379cf6c17c0fca4b8d3739}{virtual bool {\bfseries should\-Allocate} (const \hyperlink{structMemReq}{Mem\-Req} \&req)=0}\label{classCC_acca766f3f8379cf6c17c0fca4b8d3739}
+
+\item 
+\hypertarget{classCC_a336af65349d49287492ddcaa6197c6b0}{virtual uint64\-\_\-t {\bfseries process\-Eviction} (const \hyperlink{structMemReq}{Mem\-Req} \&trigger\-Req, Address wb\-Line\-Addr, int32\-\_\-t line\-Id, uint64\-\_\-t start\-Cycle)=0}\label{classCC_a336af65349d49287492ddcaa6197c6b0}
+
+\item 
+\hypertarget{classCC_a193b1f060826af44506030c2a78cebde}{virtual uint64\-\_\-t {\bfseries process\-Access} (const \hyperlink{structMemReq}{Mem\-Req} \&req, int32\-\_\-t line\-Id, uint64\-\_\-t start\-Cycle, uint64\-\_\-t $\ast$get\-Done\-Cycle=nullptr)=0}\label{classCC_a193b1f060826af44506030c2a78cebde}
+
+\item 
+\hypertarget{classCC_a66848e057fd8894a77a28e797dbc155c}{virtual void {\bfseries end\-Access} (const \hyperlink{structMemReq}{Mem\-Req} \&req)=0}\label{classCC_a66848e057fd8894a77a28e797dbc155c}
+
+\item 
+\hypertarget{classCC_ac2219b6d1f3fea343d37c80cee92b93a}{virtual void {\bfseries start\-Inv} ()=0}\label{classCC_ac2219b6d1f3fea343d37c80cee92b93a}
+
+\item 
+\hypertarget{classCC_aa3689bb729527bf2ced5a7020f9fdf65}{virtual uint64\-\_\-t {\bfseries process\-Inv} (const \hyperlink{structInvReq}{Inv\-Req} \&req, int32\-\_\-t line\-Id, uint64\-\_\-t start\-Cycle)=0}\label{classCC_aa3689bb729527bf2ced5a7020f9fdf65}
+
+\item 
+\hypertarget{classCC_a369786ed281101d04db2d841b21fd58f}{virtual uint32\-\_\-t {\bfseries num\-Sharers} (uint32\-\_\-t line\-Id)=0}\label{classCC_a369786ed281101d04db2d841b21fd58f}
+
+\item 
+\hypertarget{classCC_ad27aac34c05038196e4b59ce97e63a71}{virtual bool {\bfseries is\-Valid} (uint32\-\_\-t line\-Id)=0}\label{classCC_ad27aac34c05038196e4b59ce97e63a71}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\$lic\$ Copyright (C) 2012-\/2015 by Massachusetts Institute of Technology Copyright (C) 2010-\/2013 by The Board of Trustees of Stanford University
+
+This file is part of zsim.
+
+zsim is free software; you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, version 2.
+
+If you use this software in your research, we request that you reference the zsim paper (\char`\"{}\-Z\-Sim\-: Fast and Accurate Microarchitectural Simulation of
+\-Thousand-\/\-Core Systems\char`\"{}, Sanchez and Kozyrakis, I\-S\-C\-A-\/40, June 2013) as the source of the simulator in any publications that use this software, and that you send us a citation of your work.
+
+zsim is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+coherence\-\_\-ctrls.\-h\end{DoxyCompactItemize}

@@ -84,7 +84,7 @@ class RefreshEvent : public TimingEvent, public GlobAlloc {
         using GlobAlloc::operator delete;
 };
 
-/* Globally allocated event for scheduling
+/** Globally allocated event for scheduling
  *
  * NOTE: This event plus the bit of logic in DDRMemory that deals with event
  * management can be generalized to deal with event-driven classes that need to
@@ -97,12 +97,13 @@ class SchedEvent : public TimingEvent, public GlobAlloc {
         State state;
 
     public:
-        SchedEvent* next;  // for event freelist
+        /// for event freelist
+        SchedEvent* next;  
 
         SchedEvent(DDRMemory* _mem, int32_t domain) : TimingEvent(0, 0, domain), mem(_mem) {
             setMinStartCycle(0);
             setRunning();
-            hold();
+            hold()
             state = IDLE;
             next = nullptr;
         }
@@ -111,6 +112,12 @@ class SchedEvent : public TimingEvent, public GlobAlloc {
             panic("This is queued directly");
         }
 
+        /**
+         * This function is called from contention sim SimulatePhaseThread. 
+         * Calls mem->tick to get nextCycle.
+         * If nextCycle > 0, then requeue(nextCycle)
+         * else it calls hold() and calls mem->recycleEvent()
+         * */
         void simulate(uint64_t startCycle) {
             if (state == QUEUED) {
                 state = RUNNING;
@@ -327,6 +334,15 @@ DDRMemory::AddrLoc DDRMemory::mapLineAddr(Address lineAddr) {
     return l;
 }
 
+/**
+ * This function is called from DDRMemAccessEvent->simulate().
+ * This is in Weave phase.
+ * If rdQueue is full or  wrQueue is full, then overflow.
+ * Then move the contents of Event ev to Request rq.
+ * If overflow, push to overflow queue.
+ * else call queue(req, memCycle); This function 
+ * 
+ */
 void DDRMemory::enqueue(DDRMemoryAccEvent* ev, uint64_t sysCycle) {
     uint64_t memCycle = sysToMemCycle(sysCycle);
     DEBUG("%ld: enqueue() addr 0x%lx wr %d", memCycle, ev->getAddr(), ev->isWrite());
@@ -377,6 +393,12 @@ void DDRMemory::enqueue(DDRMemoryAccEvent* ev, uint64_t sysCycle) {
     }
 }
 
+/**
+ * This method is called from DDRMemory::enqueue and DDRMemory::tick.
+ * Most likely this is also Weave phase.
+ * Check the newest request which has the same row as req and put req next to this reuqest. This is for FRFCFS.
+ * Also sets value of rowHitSeq (used for fairness).
+ */
 void DDRMemory::queue(Request* req, uint64_t memCycle) {
     // If it's a write, respond to it immediately
     if (req->write) {
@@ -458,11 +480,17 @@ void DDRMemory::queue(Request* req, uint64_t memCycle) {
 }
 
 // For external ticks
+/**
+ * Called by schedule above.
+ * First gets the earliest cycle where 
+ *
+ * */
 uint64_t DDRMemory::tick(uint64_t sysCycle) {
     uint64_t memCycle = sysToMemCycle(sysCycle);
     assert_msg(memCycle == nextSchedCycle, "%ld != %ld", memCycle, nextSchedCycle);
     uint64_t minSchedCycle = trySchedule(memCycle, sysCycle);
     assert(minSchedCycle >= memCycle);
+    // Move request from overflow to  write/read queues.
     if (!rdQueue.full() && !wrQueue.full() && !overflowQueue.empty()) {
         Request& ovfReq = overflowQueue.front();
         bool useWrQueue = deferredWrites && ovfReq.write;
@@ -470,6 +498,7 @@ uint64_t DDRMemory::tick(uint64_t sysCycle) {
         *req = ovfReq;
         overflowQueue.pop_front();
 
+        //? Put the overflowen request on the read/write queue.
         queue(req, memCycle);
 
         // This request may be schedulable before trySchedule's minSchedCycle
@@ -502,6 +531,9 @@ void DDRMemory::recycleEvent(SchedEvent* ev) {
     eventFreelist = ev;
 }
 
+/**
+ * Returns the cycle when the next column access can be issued.
+ */
 uint64_t DDRMemory::findMinCmdCycle(const Request& r) const {
     const Bank& bank = banks[r.loc.rank][r.loc.bank];
     uint64_t minCmdCycle = std::max(r.arrivalCycle, bank.lastCmdCycle + 1);
@@ -511,18 +543,36 @@ uint64_t DDRMemory::findMinCmdCycle(const Request& r) const {
         // Either row closed, or row buffer miss
         uint64_t preCycle;
         if (!bank.open) {
+            // minPreCycle is the cycle the bank was last PRE.
             preCycle = bank.minPreCycle;
         } else {
             assert(r.loc.row != bank.openRow);
+            // minPreCycle is the cycle the bank can be precharged next.
             preCycle = std::max(r.arrivalCycle, bank.minPreCycle);
         }
+        // tRP is minimum time from PRE to ACT.
+        // tRRD ACT to ACT
+        // The actCycle can be delayed by three factors:
+        // the arrival time of the request, the delay between precharge to activate, or the delay between activate to activate.
         uint64_t actCycle = std::max(r.arrivalCycle, std::max(preCycle + tRP, bank.lastActCycle + tRRD));
+        // minActCycle return the cycle of the latest request in the activation window of the bank.
+        // tFAW is the time in which activate can be sent to 4 different banks. ?????????
         actCycle = std::max(actCycle, rankActWindows[r.loc.rank].minActCycle() + tFAW);
+        // time ACT to CAS
         minCmdCycle = actCycle + tRCD;
     }
     return minCmdCycle;
 }
 
+/**
+ * called from tick
+ * Weave phase maybe
+ * Takes first request from each bank's queue(bank's queue is in FR-FCFS order, where FR means row is open) and checks if and when the command bus is available for it.
+ * Find the earliest cycle the write/read command can be issued.
+ * minRespCycle is updated in this function: it is used to calculate the cycle for issuing commands during the next time trySchedule is called. 
+ * The bank is closed(PRE) if closed policy is used and there aren't any requests to the same row to be serviced.
+ * The time to  service the request is calculated and logged into the  stats framework.
+ */
 uint64_t DDRMemory::trySchedule(uint64_t curCycle, uint64_t sysCycle) {
     /* Implement FR-FCFS scheduling to maximize bus utilization
      *
@@ -554,8 +604,8 @@ uint64_t DDRMemory::trySchedule(uint64_t curCycle, uint64_t sysCycle) {
     while (ir != queue.end()) {
         //Bank& bank = banks[(*ir)->loc.rank][(*ir)->loc.bank];
         //if ((isWriteQueue? bank.wrReqs : bank.rdReqs).front() == *ir) {
-        if (!(*ir)->prev) {  // FASTAH!
-            uint64_t minCmdCycle = findMinCmdCycle(**ir);
+        if (!(*ir)->prev) {  // FASTAH!. Performs the same thing as the previous commented lines. Check function queue for more details.
+            uint64_t minCmdCycle = findMinCmdCycle(**ir); // The minimum cycle at which Column Access command can be issued. The returned value includes both PRE and ACT itmes.
             minSchedCycle = std::min(minSchedCycle, minCmdCycle);
             if (minCmdCycle <= curCycle) {
                 r = *ir;
@@ -584,6 +634,7 @@ uint64_t DDRMemory::trySchedule(uint64_t curCycle, uint64_t sysCycle) {
     // Compute the minimum cycle at which the read or write command can be issued,
     // without column access or data bus constraints
     uint64_t minCmdCycle = std::max(curCycle, minRespCycle - tCL);
+    // tWTR : write to read.
     if (lastCmdWasWrite && !r->write) minCmdCycle = std::max(minCmdCycle, minRespCycle + tWTR);
     bool rowHit = false;
     if (r->loc.row == bank.openRow && bank.open) {
@@ -592,6 +643,8 @@ uint64_t DDRMemory::trySchedule(uint64_t curCycle, uint64_t sysCycle) {
     } else {
         // Either row closed, or row buffer miss
         uint64_t preCycle;
+        // preCycle is when PRE can be/was issued.
+        // bank.open = false implies PRE has been done.
         bool preIssued = bank.open;
         if (!bank.open) {
             preCycle = bank.minPreCycle;
@@ -600,13 +653,18 @@ uint64_t DDRMemory::trySchedule(uint64_t curCycle, uint64_t sysCycle) {
             preCycle = std::max(r->arrivalCycle, bank.minPreCycle);
         }
 
+        // actCycle is when ACT can be issued for the row since it is row  buffer miss.
+        // tRP: PRE to ACT; tRRD: ACT to ACT
         uint64_t actCycle = std::max(r->arrivalCycle, std::max(preCycle + tRP, bank.lastActCycle + tRRD));
+        // check findMinCmdCycle for more info on this. 
         actCycle = std::max(actCycle, rankActWindows[r->loc.rank].minActCycle() + tFAW);
 
         // Record ACT
         bank.open = true;
         bank.openRow = r->loc.row;
+        // if PRE is issued(around 20 lines above), reflect it in the bank.
         if (preIssued) bank.minPreCycle = preCycle + tRAS;
+        // DRAM has restrictions on the number of row activates that can be issued to a particular bank in a time interval.
         rankActWindows[r->loc.rank].addActivation(actCycle);
         bank.lastActCycle = actCycle;
 
@@ -639,6 +697,9 @@ uint64_t DDRMemory::trySchedule(uint64_t curCycle, uint64_t sysCycle) {
     // Issue response
     if (r->ev) {
         auto ev = r->ev;
+        // Only reads have ev.
+        // Writes were stripped off their events in DDRMemory::queue function(above).
+        // They were responded to immediately.
         assert(!ev->isWrite() && !r->write);  // reads only
 
         uint64_t doneSysCycle = memToSysCycle(minRespCycle) + controllerSysLatency;
@@ -678,6 +739,7 @@ uint64_t DDRMemory::trySchedule(uint64_t curCycle, uint64_t sysCycle) {
     DEBUG("Served 0x%lx lat %ld clocks", r->addr, minRespCycle-curCycle);
 
     // Dequeue this req
+    // from both the queues. Ie., DDRMemory's rd or wr queue and the bank's queue.
     queue.remove(ir);
     (isWriteQueue? bank.wrReqs : bank.rdReqs).pop_front();
 

@@ -1,0 +1,45 @@
+\hypertarget{classDDRMemory}{\section{D\-D\-R\-Memory Class Reference}
+\label{classDDRMemory}\index{D\-D\-R\-Memory@{D\-D\-R\-Memory}}
+}
+Inheritance diagram for D\-D\-R\-Memory\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classDDRMemory}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDDRMemory_aa395b8a32cf5406305897e0610522778}{{\bfseries D\-D\-R\-Memory} (uint32\-\_\-t \-\_\-line\-Size, uint32\-\_\-t \-\_\-col\-Size, uint32\-\_\-t \-\_\-ranks\-Per\-Channel, uint32\-\_\-t \-\_\-banks\-Per\-Rank, uint32\-\_\-t \-\_\-sys\-Freq\-M\-Hz, const char $\ast$tech, const char $\ast$addr\-Mapping, uint32\-\_\-t \-\_\-controller\-Sys\-Latency, uint32\-\_\-t \-\_\-queue\-Depth, uint32\-\_\-t \-\_\-row\-Hit\-Limit, bool \-\_\-deferred\-Writes, bool \-\_\-closed\-Page, uint32\-\_\-t \-\_\-domain, g\-\_\-string \&\-\_\-name, uint32\-\_\-t \-\_\-t\-B\-L=4, double time\-\_\-scale=1.\-0)}\label{classDDRMemory_aa395b8a32cf5406305897e0610522778}
+
+\item 
+\hypertarget{classDDRMemory_a58c0d5633d6ada4c71d06a452ca716a1}{void {\bfseries init\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$parent\-Stat)}\label{classDDRMemory_a58c0d5633d6ada4c71d06a452ca716a1}
+
+\item 
+\hypertarget{classDDRMemory_a0755b4e9f98c10e62c437ae7d7111c0a}{const char $\ast$ {\bfseries get\-Name} ()}\label{classDDRMemory_a0755b4e9f98c10e62c437ae7d7111c0a}
+
+\item 
+\hypertarget{classDDRMemory_a2f25f7e10c2687de33715398b71b2f3b}{uint64\-\_\-t {\bfseries access} (\hyperlink{structMemReq}{Mem\-Req} \&req, int type, uint32\-\_\-t data\-\_\-size=4)}\label{classDDRMemory_a2f25f7e10c2687de33715398b71b2f3b}
+
+\item 
+\hypertarget{classDDRMemory_a1bc441f6c27aa782f6c10ffcc44a74aa}{uint64\-\_\-t {\bfseries access} (\hyperlink{structMemReq}{Mem\-Req} \&req)}\label{classDDRMemory_a1bc441f6c27aa782f6c10ffcc44a74aa}
+
+\item 
+\hypertarget{classDDRMemory_a749d93a0a63f591c794c9718da692c8f}{void {\bfseries enqueue} (\hyperlink{classDDRMemoryAccEvent}{D\-D\-R\-Memory\-Acc\-Event} $\ast$ev, uint64\-\_\-t cycle)}\label{classDDRMemory_a749d93a0a63f591c794c9718da692c8f}
+
+\item 
+\hypertarget{classDDRMemory_a3f20a7e4a2d31a9220f3da4b39f84768}{void {\bfseries refresh} (uint64\-\_\-t sys\-Cycle)}\label{classDDRMemory_a3f20a7e4a2d31a9220f3da4b39f84768}
+
+\item 
+\hypertarget{classDDRMemory_a5ce560abc597aef55fa3f21b28d00d58}{uint64\-\_\-t {\bfseries tick} (uint64\-\_\-t sys\-Cycle)}\label{classDDRMemory_a5ce560abc597aef55fa3f21b28d00d58}
+
+\item 
+\hypertarget{classDDRMemory_a53c30add30e8bff9a8c8610ef449d86b}{void {\bfseries recycle\-Event} (\hyperlink{classSchedEvent}{Sched\-Event} $\ast$ev)}\label{classDDRMemory_a53c30add30e8bff9a8c8610ef449d86b}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+ddr\-\_\-mem.\-h\item 
+ddr\-\_\-mem.\-cpp\end{DoxyCompactItemize}

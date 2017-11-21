@@ -1,0 +1,63 @@
+\hypertarget{classFilterCache}{\section{Filter\-Cache Class Reference}
+\label{classFilterCache}\index{Filter\-Cache@{Filter\-Cache}}
+}
+
+
+{\ttfamily \#include $<$filter\-\_\-cache.\-h$>$}
+
+Inheritance diagram for Filter\-Cache\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classFilterCache}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classFilterCache_a309ef8fa21b08e740d71df61fdcb5768}{{\bfseries Filter\-Cache} (uint32\-\_\-t \-\_\-num\-Sets, uint32\-\_\-t \-\_\-num\-Lines, \hyperlink{classCC}{C\-C} $\ast$\-\_\-cc, \hyperlink{classCacheArray}{Cache\-Array} $\ast$\-\_\-array, \hyperlink{classReplPolicy}{Repl\-Policy} $\ast$\-\_\-rp, uint32\-\_\-t \-\_\-acc\-Lat, uint32\-\_\-t \-\_\-inv\-Lat, g\-\_\-string \&\-\_\-name, \hyperlink{classConfig}{Config} \&config)}\label{classFilterCache_a309ef8fa21b08e740d71df61fdcb5768}
+
+\item 
+\hypertarget{classFilterCache_ade026c14eeb800335f9648563da9f6ed}{void {\bfseries set\-Source\-Id} (uint32\-\_\-t id)}\label{classFilterCache_ade026c14eeb800335f9648563da9f6ed}
+
+\item 
+\hypertarget{classFilterCache_a31a9f6cfc6b1e0374d1ddc104677a922}{void {\bfseries set\-Flags} (uint32\-\_\-t flags)}\label{classFilterCache_a31a9f6cfc6b1e0374d1ddc104677a922}
+
+\item 
+\hypertarget{classFilterCache_a8da6656008a754aad50e3784a2d7a667}{void {\bfseries init\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$parent\-Stat)}\label{classFilterCache_a8da6656008a754aad50e3784a2d7a667}
+
+\item 
+\hypertarget{classFilterCache_a1bd3192311a095740da165e296e0bb80}{uint64\-\_\-t {\bfseries load} (Address v\-Addr, uint64\-\_\-t cur\-Cycle)}\label{classFilterCache_a1bd3192311a095740da165e296e0bb80}
+
+\item 
+\hypertarget{classFilterCache_a919b949716858aafa3f2942c84aa4212}{uint64\-\_\-t {\bfseries store} (Address v\-Addr, uint64\-\_\-t cur\-Cycle)}\label{classFilterCache_a919b949716858aafa3f2942c84aa4212}
+
+\item 
+\hypertarget{classFilterCache_acedfa30e1ab154f2eac586cadc1dd96b}{uint64\-\_\-t {\bfseries replace} (Address v\-Line\-Addr, uint32\-\_\-t idx, bool is\-Load, uint64\-\_\-t cur\-Cycle)}\label{classFilterCache_acedfa30e1ab154f2eac586cadc1dd96b}
+
+\item 
+\hypertarget{classFilterCache_abbcca6a956003c482303421aa0638da1}{uint64\-\_\-t {\bfseries invalidate} (const \hyperlink{structInvReq}{Inv\-Req} \&req)}\label{classFilterCache_abbcca6a956003c482303421aa0638da1}
+
+\item 
+\hypertarget{classFilterCache_a2ad2ace77694d58bb47cf298963c6cd9}{void {\bfseries context\-Switch} ()}\label{classFilterCache_a2ad2ace77694d58bb47cf298963c6cd9}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\$lic\$ Copyright (C) 2012-\/2015 by Massachusetts Institute of Technology Copyright (C) 2010-\/2013 by The Board of Trustees of Stanford University
+
+This file is part of zsim.
+
+zsim is free software; you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, version 2.
+
+If you use this software in your research, we request that you reference the zsim paper (\char`\"{}\-Z\-Sim\-: Fast and Accurate Microarchitectural Simulation of
+\-Thousand-\/\-Core Systems\char`\"{}, Sanchez and Kozyrakis, I\-S\-C\-A-\/40, June 2013) as the source of the simulator in any publications that use this software, and that you send us a citation of your work.
+
+zsim is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+filter\-\_\-cache.\-h\end{DoxyCompactItemize}

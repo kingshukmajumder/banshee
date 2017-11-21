@@ -1,0 +1,101 @@
+\hypertarget{classCache}{\section{Cache Class Reference}
+\label{classCache}\index{Cache@{Cache}}
+}
+Inheritance diagram for Cache\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classCache}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCache_a398112ee381973ef3777746a31900320}{Cache} (uint32\-\_\-t \-\_\-num\-Lines, \hyperlink{classCC}{C\-C} $\ast$\-\_\-cc, \hyperlink{classCacheArray}{Cache\-Array} $\ast$\-\_\-array, \hyperlink{classReplPolicy}{Repl\-Policy} $\ast$\-\_\-rp, uint32\-\_\-t \-\_\-acc\-Lat, uint32\-\_\-t \-\_\-inv\-Lat, const g\-\_\-string \&\-\_\-name)
+\item 
+\hypertarget{classCache_a723ba68ec1f3e8d46b536e003d2d31d4}{const char $\ast$ {\bfseries get\-Name} ()}\label{classCache_a723ba68ec1f3e8d46b536e003d2d31d4}
+
+\item 
+\hypertarget{classCache_a79ba01ab96d6949c8cf3f71cf310d9bd}{void {\bfseries set\-Parents} (uint32\-\_\-t \-\_\-child\-Id, const \hyperlink{classg__vector}{g\-\_\-vector}$<$ \hyperlink{classMemObject}{Mem\-Object} $\ast$ $>$ \&parents, \hyperlink{classNetwork}{Network} $\ast$network)}\label{classCache_a79ba01ab96d6949c8cf3f71cf310d9bd}
+
+\item 
+\hypertarget{classCache_a5c6c05094ed04256fd6f77a3ca20673e}{void {\bfseries set\-Children} (const \hyperlink{classg__vector}{g\-\_\-vector}$<$ \hyperlink{classBaseCache}{Base\-Cache} $\ast$ $>$ \&children, \hyperlink{classNetwork}{Network} $\ast$network)}\label{classCache_a5c6c05094ed04256fd6f77a3ca20673e}
+
+\item 
+\hypertarget{classCache_a3cd51a37ecac027028c662279fed96e3}{void {\bfseries init\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$parent\-Stat)}\label{classCache_a3cd51a37ecac027028c662279fed96e3}
+
+\item 
+\hypertarget{classCache_a7d23c3978dca10511edbfba724489a14}{virtual uint64\-\_\-t {\bfseries access} (\hyperlink{structMemReq}{Mem\-Req} \&req)}\label{classCache_a7d23c3978dca10511edbfba724489a14}
+
+\item 
+\hypertarget{classCache_a2b21fdc8a63f1c1a60b84643debe82db}{virtual uint64\-\_\-t {\bfseries invalidate} (const \hyperlink{structInvReq}{Inv\-Req} \&req)}\label{classCache_a2b21fdc8a63f1c1a60b84643debe82db}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCache_a6f04561d53efc7623c809e6c885d8c09}{void {\bfseries init\-Cache\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$cache\-Stat)}\label{classCache_a6f04561d53efc7623c809e6c885d8c09}
+
+\item 
+\hypertarget{classCache_acd207b095f2b950d8887a1f9614f994b}{void {\bfseries start\-Invalidate} ()}\label{classCache_acd207b095f2b950d8887a1f9614f994b}
+
+\item 
+\hypertarget{classCache_abde65d6c87557ccdf3557e6da05dcb7c}{uint64\-\_\-t {\bfseries finish\-Invalidate} (const \hyperlink{structInvReq}{Inv\-Req} \&req)}\label{classCache_abde65d6c87557ccdf3557e6da05dcb7c}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classCache_a279fee4d6cedcfb14394e6971be01978}{\hyperlink{classCC}{C\-C} $\ast$ {\bfseries cc}}\label{classCache_a279fee4d6cedcfb14394e6971be01978}
+
+\item 
+\hypertarget{classCache_a2af76891495aab963a368ffd9ccde010}{\hyperlink{classCacheArray}{Cache\-Array} $\ast$ {\bfseries array}}\label{classCache_a2af76891495aab963a368ffd9ccde010}
+
+\item 
+\hypertarget{classCache_a93822b507943d4a2383ad83e1d706582}{\hyperlink{classReplPolicy}{Repl\-Policy} $\ast$ {\bfseries rp}}\label{classCache_a93822b507943d4a2383ad83e1d706582}
+
+\item 
+\hypertarget{classCache_a0d43aadafe65c0753c8656f315e27a8d}{uint32\-\_\-t {\bfseries num\-Lines}}\label{classCache_a0d43aadafe65c0753c8656f315e27a8d}
+
+\item 
+\hypertarget{classCache_acec1448a346c8ebf5412d4ba0d8f0645}{uint32\-\_\-t {\bfseries acc\-Lat}}\label{classCache_acec1448a346c8ebf5412d4ba0d8f0645}
+
+\item 
+\hypertarget{classCache_adeafa997d10220f79e5cf85c1c3ab46e}{uint32\-\_\-t {\bfseries inv\-Lat}}\label{classCache_adeafa997d10220f79e5cf85c1c3ab46e}
+
+\item 
+\hypertarget{classCache_a85342a02c0ac63167a48b6792e13e8d9}{g\-\_\-string {\bfseries name}}\label{classCache_a85342a02c0ac63167a48b6792e13e8d9}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCache_a398112ee381973ef3777746a31900320}{\index{Cache@{Cache}!Cache@{Cache}}
+\index{Cache@{Cache}!Cache@{Cache}}
+\subsubsection[{Cache}]{\setlength{\rightskip}{0pt plus 5cm}Cache\-::\-Cache (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{\-\_\-num\-Lines, }
+\item[{{\bf C\-C} $\ast$}]{\-\_\-cc, }
+\item[{{\bf Cache\-Array} $\ast$}]{\-\_\-array, }
+\item[{{\bf Repl\-Policy} $\ast$}]{\-\_\-rp, }
+\item[{uint32\-\_\-t}]{\-\_\-acc\-Lat, }
+\item[{uint32\-\_\-t}]{\-\_\-inv\-Lat, }
+\item[{const g\-\_\-string \&}]{\-\_\-name}
+\end{DoxyParamCaption}
+)}}\label{classCache_a398112ee381973ef3777746a31900320}
+\$lic\$ Copyright (C) 2012-\/2015 by Massachusetts Institute of Technology Copyright (C) 2010-\/2013 by The Board of Trustees of Stanford University
+
+This file is part of zsim.
+
+zsim is free software; you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, version 2.
+
+If you use this software in your research, we request that you reference the zsim paper (\char`\"{}\-Z\-Sim\-: Fast and Accurate Microarchitectural Simulation of
+\-Thousand-\/\-Core Systems\char`\"{}, Sanchez and Kozyrakis, I\-S\-C\-A-\/40, June 2013) as the source of the simulator in any publications that use this software, and that you send us a citation of your work.
+
+zsim is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+cache.\-h\item 
+cache.\-cpp\end{DoxyCompactItemize}

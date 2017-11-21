@@ -1,0 +1,43 @@
+\hypertarget{classPagePlacementPolicy}{\section{Page\-Placement\-Policy Class Reference}
+\label{classPagePlacementPolicy}\index{Page\-Placement\-Policy@{Page\-Placement\-Policy}}
+}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Rep\-Scheme} \{ {\bfseries L\-R\-U} = 0, 
+{\bfseries F\-B\-R}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPagePlacementPolicy_a10c38deeeebc5cced0e2589f70c508a1}{{\bfseries Page\-Placement\-Policy} (\hyperlink{classMemoryController}{Memory\-Controller} $\ast$mc)}\label{classPagePlacementPolicy_a10c38deeeebc5cced0e2589f70c508a1}
+
+\item 
+\hypertarget{classPagePlacementPolicy_af2da8404147f8ad8fda9a1c01db8c9f3}{void {\bfseries initialize} (\hyperlink{classConfig}{Config} \&config)}\label{classPagePlacementPolicy_af2da8404147f8ad8fda9a1c01db8c9f3}
+
+\item 
+\hypertarget{classPagePlacementPolicy_aa4e62dec9a5828d9d09fc25d5c6e200d}{uint32\-\_\-t {\bfseries handle\-Cache\-Miss} (Address tag, Req\-Type type, uint64\-\_\-t set\-\_\-num, \hyperlink{classSet}{Set} $\ast$set, bool \&counter\-\_\-access)}\label{classPagePlacementPolicy_aa4e62dec9a5828d9d09fc25d5c6e200d}
+
+\item 
+\hypertarget{classPagePlacementPolicy_a1e634d46b746bf65a82a406a242e3daa}{void {\bfseries handle\-Cache\-Hit} (Address tag, Req\-Type type, uint64\-\_\-t set\-\_\-num, \hyperlink{classSet}{Set} $\ast$set, bool \&counter\-\_\-access, uint32\-\_\-t hit\-\_\-way)}\label{classPagePlacementPolicy_a1e634d46b746bf65a82a406a242e3daa}
+
+\item 
+\hypertarget{classPagePlacementPolicy_ab3ce2f295e6cc109d9071d98a7cdbaa4}{uint64\-\_\-t {\bfseries get\-Traffic} ()}\label{classPagePlacementPolicy_ab3ce2f295e6cc109d9071d98a7cdbaa4}
+
+\item 
+\hypertarget{classPagePlacementPolicy_a425fd492d861b3f9e1b62feaf01da14e}{void {\bfseries flush\-Chunk} (uint32\-\_\-t set)}\label{classPagePlacementPolicy_a425fd492d861b3f9e1b62feaf01da14e}
+
+\item 
+\hypertarget{classPagePlacementPolicy_a322b52d537c85fdaaaa3549322c95ddc}{void {\bfseries clear\-Stats} ()}\label{classPagePlacementPolicy_a322b52d537c85fdaaaa3549322c95ddc}
+
+\item 
+\hypertarget{classPagePlacementPolicy_a29e6b35538cc52d8fe1d901dc0f33cab}{Rep\-Scheme {\bfseries get\-\_\-placement\-\_\-policy} ()}\label{classPagePlacementPolicy_a29e6b35538cc52d8fe1d901dc0f33cab}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+page\-\_\-placement.\-h\item 
+page\-\_\-placement.\-cpp\end{DoxyCompactItemize}

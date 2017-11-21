@@ -1,0 +1,209 @@
+\hypertarget{classMemControllerBase}{\section{Mem\-Controller\-Base Class Reference}
+\label{classMemControllerBase}\index{Mem\-Controller\-Base@{Mem\-Controller\-Base}}
+}
+Inheritance diagram for Mem\-Controller\-Base\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classMemControllerBase}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structMemControllerBase_1_1powerValue}{power\-Value}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMemControllerBase_a3cb4e5c7ae504117be8c6ff15502dcc6}{{\bfseries Mem\-Controller\-Base} (g\-\_\-string \-\_\-mem\-Cfg, uint32\-\_\-t \-\_\-cache\-Line\-Size, uint32\-\_\-t \-\_\-sys\-Freq\-M\-Hz, uint32\-\_\-t \-\_\-domain, g\-\_\-string \&\-\_\-name)}\label{classMemControllerBase_a3cb4e5c7ae504117be8c6ff15502dcc6}
+
+\item 
+\hypertarget{classMemControllerBase_ac85a1504e9c0652e1612d59badde0032}{const char $\ast$ {\bfseries get\-Name} ()}\label{classMemControllerBase_ac85a1504e9c0652e1612d59badde0032}
+
+\item 
+\hypertarget{classMemControllerBase_a4cd70799a3c1edb0af291878f5a9a773}{void {\bfseries enqueue} (\hyperlink{classMemAccessEventBase}{Mem\-Access\-Event\-Base} $\ast$ev, uint64\-\_\-t cycle)}\label{classMemControllerBase_a4cd70799a3c1edb0af291878f5a9a773}
+
+\item 
+\hypertarget{classMemControllerBase_a5db8f1b19708c92ae85e3797bf6d6f8b}{uint64\-\_\-t {\bfseries access} (\hyperlink{structMemReq}{Mem\-Req} \&req)}\label{classMemControllerBase_a5db8f1b19708c92ae85e3797bf6d6f8b}
+
+\item 
+\hypertarget{classMemControllerBase_ac926fe00ab34f86ed5f2fb398668f978}{uint32\-\_\-t {\bfseries tick} (uint64\-\_\-t sys\-Cycle)}\label{classMemControllerBase_ac926fe00ab34f86ed5f2fb398668f978}
+
+\item 
+\hypertarget{classMemControllerBase_a9703e0e4f3b0846c3560f10f6e11492e}{void {\bfseries init\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$parent\-Stat)}\label{classMemControllerBase_a9703e0e4f3b0846c3560f10f6e11492e}
+
+\item 
+\hypertarget{classMemControllerBase_ab575ace5f9c765308ab6aa3ca64d5559}{void {\bfseries update\-Stats} (void)}\label{classMemControllerBase_ab575ace5f9c765308ab6aa3ca64d5559}
+
+\item 
+\hypertarget{classMemControllerBase_a4c23cd0fbf82abc036fa0050cf752d60}{void {\bfseries finish} (void)}\label{classMemControllerBase_a4c23cd0fbf82abc036fa0050cf752d60}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMemControllerBase_a5876978d498a9419a1737f739ba9da57}{virtual uint64\-\_\-t {\bfseries Return\-Channel} (Address addr)}\label{classMemControllerBase_a5876978d498a9419a1737f739ba9da57}
+
+\item 
+\hypertarget{classMemControllerBase_ab8db0d9dad3b6636e4823fb6f27ec632}{virtual uint64\-\_\-t {\bfseries Latency\-Simulate} (Address line\-Addr, uint64\-\_\-t sys\-Cycle, Mem\-Access\-Type type)}\label{classMemControllerBase_ab8db0d9dad3b6636e4823fb6f27ec632}
+
+\item 
+\hypertarget{classMemControllerBase_aedd18f1b2a1f5e2996f3a63a2318b6e3}{virtual void {\bfseries Update\-Cmd\-Counters} (void)}\label{classMemControllerBase_aedd18f1b2a1f5e2996f3a63a2318b6e3}
+
+\item 
+\hypertarget{classMemControllerBase_a4839d77437ef24c9db6ac2cf00c1fb43}{virtual void {\bfseries Estimate\-Powers} (uint64\-\_\-t sys\-Cycle, bool finish=false)}\label{classMemControllerBase_a4839d77437ef24c9db6ac2cf00c1fb43}
+
+\item 
+\hypertarget{classMemControllerBase_a13d9efb4d902b74dd4b2deda7181906f}{virtual void {\bfseries Estimate\-Bandwidth} (uint64\-\_\-t real\-Time, uint64\-\_\-t last\-Time, bool finish=false)}\label{classMemControllerBase_a13d9efb4d902b74dd4b2deda7181906f}
+
+\item 
+\hypertarget{classMemControllerBase_a11fc2734502345a5a106a4626d64b418}{virtual uint64\-\_\-t {\bfseries Calc\-D\-Q\-Term\-Cur} (uint64\-\_\-t acc\-\_\-dq, uint64\-\_\-t last\-\_\-dq, uint64\-\_\-t inst\-Cycle, uint64\-\_\-t mem\-Cycle, uint64\-\_\-t last\-Mem\-Cycle)}\label{classMemControllerBase_a11fc2734502345a5a106a4626d64b418}
+
+\item 
+\hypertarget{classMemControllerBase_a2a4f871e47c0a60424db4f2e28b4aef7}{virtual uint64\-\_\-t {\bfseries Calc\-D\-Q\-Term\-Acc} (uint64\-\_\-t acc\-\_\-dq, uint64\-\_\-t mem\-Cycle, uint64\-\_\-t last\-Mem\-Cycle)}\label{classMemControllerBase_a2a4f871e47c0a60424db4f2e28b4aef7}
+
+\item 
+\hypertarget{classMemControllerBase_a2cd02ede21ab33ea364bd2ae14df35d9}{virtual void {\bfseries Tick\-Scheduler} (uint64\-\_\-t sys\-Cycle)}\label{classMemControllerBase_a2cd02ede21ab33ea364bd2ae14df35d9}
+
+\item 
+\hypertarget{classMemControllerBase_a7177fcd259a98335c3c32b1dc86c54f6}{uint64\-\_\-t {\bfseries sys\-To\-Mem\-Cycle} (uint64\-\_\-t sys\-Cycle)}\label{classMemControllerBase_a7177fcd259a98335c3c32b1dc86c54f6}
+
+\item 
+\hypertarget{classMemControllerBase_aa09dc5a73cb7437ff5aac88515e469e6}{uint64\-\_\-t {\bfseries sys\-To\-Micro\-Sec} (uint64\-\_\-t sys\-Cycle)}\label{classMemControllerBase_aa09dc5a73cb7437ff5aac88515e469e6}
+
+\item 
+\hypertarget{classMemControllerBase_aaf2fdcacf48b08800ffd1aabd8ac36b9}{uint64\-\_\-t {\bfseries usec\-To\-Sys\-Cycle} (uint64\-\_\-t usec)}\label{classMemControllerBase_aaf2fdcacf48b08800ffd1aabd8ac36b9}
+
+\item 
+\hypertarget{classMemControllerBase_aab7c0e55f63511b8ce54ec2d765115ad}{uint64\-\_\-t {\bfseries mem\-To\-Sys\-Cycle} (uint64\-\_\-t mem\-Cycle)}\label{classMemControllerBase_aab7c0e55f63511b8ce54ec2d765115ad}
+
+\item 
+\hypertarget{classMemControllerBase_a1516dc45607d418a6171562927486b08}{uint64\-\_\-t {\bfseries mem\-To\-Micro\-Sec} (uint64\-\_\-t mem\-Cycle)}\label{classMemControllerBase_a1516dc45607d418a6171562927486b08}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMemControllerBase_a365a95eafef280acf977109508e3822a}{g\-\_\-string {\bfseries name}}\label{classMemControllerBase_a365a95eafef280acf977109508e3822a}
+
+\item 
+\hypertarget{classMemControllerBase_aa53b4d80588c5b80992893d5b0a77290}{uint32\-\_\-t {\bfseries domain}}\label{classMemControllerBase_aa53b4d80588c5b80992893d5b0a77290}
+
+\item 
+\hypertarget{classMemControllerBase_aac8a82822840a4e9429177aad75a5bc0}{uint32\-\_\-t {\bfseries cache\-Line\-Size}}\label{classMemControllerBase_aac8a82822840a4e9429177aad75a5bc0}
+
+\item 
+\hypertarget{classMemControllerBase_a723ddecb498404f3ada20a85549da45c}{\hyperlink{classMemParam}{Mem\-Param} $\ast$ {\bfseries m\-Param}}\label{classMemControllerBase_a723ddecb498404f3ada20a85549da45c}
+
+\item 
+\hypertarget{classMemControllerBase_a3192c564283ff25cf0a071b0f0070806}{\hyperlink{classg__vector}{g\-\_\-vector}$<$ \hyperlink{classMemChannelBase}{Mem\-Channel\-Base} $\ast$ $>$ {\bfseries chnls}}\label{classMemControllerBase_a3192c564283ff25cf0a071b0f0070806}
+
+\item 
+\hypertarget{classMemControllerBase_a734b5b07e0c2e8162a45c5a29e2f98f1}{\hyperlink{classg__vector}{g\-\_\-vector}$<$ \hyperlink{classMemSchedulerBase}{Mem\-Scheduler\-Base} $\ast$ $>$ {\bfseries sches}}\label{classMemControllerBase_a734b5b07e0c2e8162a45c5a29e2f98f1}
+
+\item 
+\hypertarget{classMemControllerBase_a4213279ff6df93d1c57931d4258a0914}{lock\-\_\-t {\bfseries update\-Lock}}\label{classMemControllerBase_a4213279ff6df93d1c57931d4258a0914}
+
+\item 
+\hypertarget{classMemControllerBase_a4e70d2029307bb11b52d92b3fafc3703}{uint64\-\_\-t {\bfseries sys\-Freq\-K\-Hz}}\label{classMemControllerBase_a4e70d2029307bb11b52d92b3fafc3703}
+
+\item 
+\hypertarget{classMemControllerBase_ab00504a6cd30b54b33d68052301b0eb5}{uint64\-\_\-t {\bfseries mem\-Freq\-K\-Hz}}\label{classMemControllerBase_ab00504a6cd30b54b33d68052301b0eb5}
+
+\item 
+\hypertarget{classMemControllerBase_a6e424049a13aa802ac437ee3fb698420}{uint64\-\_\-t {\bfseries last\-Phase\-Cycle}}\label{classMemControllerBase_a6e424049a13aa802ac437ee3fb698420}
+
+\item 
+\hypertarget{classMemControllerBase_a16f3ca2a55ff3354e492c13cde62cace}{uint64\-\_\-t {\bfseries last\-Accessed\-Cycle}}\label{classMemControllerBase_a16f3ca2a55ff3354e492c13cde62cace}
+
+\item 
+\hypertarget{classMemControllerBase_ae27a15b7a838401a8ec61a6bb38834d6}{uint64\-\_\-t {\bfseries next\-Sys\-Tick}}\label{classMemControllerBase_ae27a15b7a838401a8ec61a6bb38834d6}
+
+\item 
+\hypertarget{classMemControllerBase_aed5a352c4f08eba314634c2c8a5fd6f9}{uint64\-\_\-t {\bfseries report\-Period\-Cycle}}\label{classMemControllerBase_aed5a352c4f08eba314634c2c8a5fd6f9}
+
+\item 
+\hypertarget{classMemControllerBase_a29e2a523e81c36342bdb5dc6fcf17896}{uint32\-\_\-t {\bfseries min\-Latency} \mbox{[}N\-U\-M\-\_\-\-A\-C\-C\-E\-S\-S\-\_\-\-T\-Y\-P\-E\-S\mbox{]}}\label{classMemControllerBase_a29e2a523e81c36342bdb5dc6fcf17896}
+
+\item 
+\hypertarget{classMemControllerBase_aed6ebab68ec44540555d3bb9066e0d09}{uint32\-\_\-t {\bfseries pre\-Delay} \mbox{[}N\-U\-M\-\_\-\-A\-C\-C\-E\-S\-S\-\_\-\-T\-Y\-P\-E\-S\mbox{]}}\label{classMemControllerBase_aed6ebab68ec44540555d3bb9066e0d09}
+
+\item 
+\hypertarget{classMemControllerBase_a211323b56348c010f0977748150dd785}{uint32\-\_\-t {\bfseries post\-Delay} \mbox{[}N\-U\-M\-\_\-\-A\-C\-C\-E\-S\-S\-\_\-\-T\-Y\-P\-E\-S\mbox{]}}\label{classMemControllerBase_a211323b56348c010f0977748150dd785}
+
+\item 
+\hypertarget{classMemControllerBase_ae3a7adebf0d2569bfd90b089ee497f41}{uint32\-\_\-t {\bfseries mem\-Min\-Latency} \mbox{[}N\-U\-M\-\_\-\-A\-C\-C\-E\-S\-S\-\_\-\-T\-Y\-P\-E\-S\mbox{]}}\label{classMemControllerBase_ae3a7adebf0d2569bfd90b089ee497f41}
+
+\item 
+\hypertarget{classMemControllerBase_ae929fe2f7d8d019a62e5f2f5b80d3cf7}{\hyperlink{classCounter}{Counter} {\bfseries prof\-Reads}}\label{classMemControllerBase_ae929fe2f7d8d019a62e5f2f5b80d3cf7}
+
+\item 
+\hypertarget{classMemControllerBase_aa13533aa837637be4226fb5ef18895ef}{\hyperlink{classCounter}{Counter} {\bfseries prof\-Writes}}\label{classMemControllerBase_aa13533aa837637be4226fb5ef18895ef}
+
+\item 
+\hypertarget{classMemControllerBase_a53b1dfe0e3098843ee7c5ecbe68aed40}{\hyperlink{classCounter}{Counter} {\bfseries prof\-Total\-Rd\-Lat}}\label{classMemControllerBase_a53b1dfe0e3098843ee7c5ecbe68aed40}
+
+\item 
+\hypertarget{classMemControllerBase_a46d5678a3c69afcc0b3fb969c914cf49}{\hyperlink{classCounter}{Counter} {\bfseries prof\-Total\-Wr\-Lat}}\label{classMemControllerBase_a46d5678a3c69afcc0b3fb969c914cf49}
+
+\item 
+\hypertarget{classMemControllerBase_a904b055f2cefc7dd9719c711b122ccf3}{\hyperlink{classVectorCounter}{Vector\-Counter} {\bfseries latency\-Hist}}\label{classMemControllerBase_a904b055f2cefc7dd9719c711b122ccf3}
+
+\item 
+\hypertarget{classMemControllerBase_ad2257d8b9c9a40c38812ba906503815f}{uint32\-\_\-t {\bfseries lh\-Bin\-Size}}\label{classMemControllerBase_ad2257d8b9c9a40c38812ba906503815f}
+
+\item 
+\hypertarget{classMemControllerBase_af8e40a85197fc0d22aef005769e79120}{uint32\-\_\-t {\bfseries lh\-Num\-Bins}}\label{classMemControllerBase_af8e40a85197fc0d22aef005769e79120}
+
+\item 
+\hypertarget{classMemControllerBase_a33989c09f3183d0faae335c1c3eac71f}{\hyperlink{classCounter}{Counter} {\bfseries prof\-Activate}}\label{classMemControllerBase_a33989c09f3183d0faae335c1c3eac71f}
+
+\item 
+\hypertarget{classMemControllerBase_a7b2958f54bb8176111d0d4a9ef30b401}{\hyperlink{classCounter}{Counter} {\bfseries prof\-Precharge}}\label{classMemControllerBase_a7b2958f54bb8176111d0d4a9ef30b401}
+
+\item 
+\hypertarget{classMemControllerBase_a18a539603e9b63376146d47e7e5c6f9e}{\hyperlink{classCounter}{Counter} {\bfseries prof\-Refresh}}\label{classMemControllerBase_a18a539603e9b63376146d47e7e5c6f9e}
+
+\item 
+\hypertarget{classMemControllerBase_a789481ccba1db83f06c431447f53ff29}{\hyperlink{classCounter}{Counter} {\bfseries prof\-Acc\-Avg\-Power} \mbox{[}pw\-Counter\-Num\mbox{]}}\label{classMemControllerBase_a789481ccba1db83f06c431447f53ff29}
+
+\item 
+\hypertarget{classMemControllerBase_a02f29728a18f67902b8a623054123487}{\hyperlink{classCounter}{Counter} {\bfseries prof\-Cur\-Avg\-Power} \mbox{[}pw\-Counter\-Num\mbox{]}}\label{classMemControllerBase_a02f29728a18f67902b8a623054123487}
+
+\item 
+\hypertarget{classMemControllerBase_ae934f4caa64c95e622cbaa8f98351e14}{\hyperlink{classCounter}{Counter} {\bfseries prof\-Bandwidth} \mbox{[}bw\-Counter\-Num\mbox{]}}\label{classMemControllerBase_ae934f4caa64c95e622cbaa8f98351e14}
+
+\item 
+\hypertarget{classMemControllerBase_a032e3ffd8e0802deb05e31b777077370}{uint64\-\_\-t {\bfseries last\-Accesses}}\label{classMemControllerBase_a032e3ffd8e0802deb05e31b777077370}
+
+\item 
+\hypertarget{classMemControllerBase_a0984e4d7df120b26b706e7462d660a89}{uint64\-\_\-t {\bfseries max\-Bandwidth}}\label{classMemControllerBase_a0984e4d7df120b26b706e7462d660a89}
+
+\item 
+\hypertarget{classMemControllerBase_af72b5a84705a24abca3be393b2b3b18f}{uint64\-\_\-t {\bfseries min\-Bandwidth}}\label{classMemControllerBase_af72b5a84705a24abca3be393b2b3b18f}
+
+\item 
+\hypertarget{classMemControllerBase_a0fc1ddd85369eefdb19fa006bb63237f}{gz\-File {\bfseries addr\-Trace\-Log}}\label{classMemControllerBase_a0fc1ddd85369eefdb19fa006bb63237f}
+
+\item 
+\hypertarget{classMemControllerBase_a89831cb6c1db3cea2d480afcab072718}{uint64\-\_\-t {\bfseries last\-Mem\-Cycle}}\label{classMemControllerBase_a89831cb6c1db3cea2d480afcab072718}
+
+\item 
+\hypertarget{classMemControllerBase_a2570f098bda4e1d3a1e9ba84304f4f45}{\hyperlink{structMemControllerBase_1_1powerValue}{power\-Value} {\bfseries last\-Power}}\label{classMemControllerBase_a2570f098bda4e1d3a1e9ba84304f4f45}
+
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMemControllerBase_a6bf1d9fd5b60dfa7052f176868311cb0}{static const uint32\-\_\-t {\bfseries pw\-Counter\-Num} = 7}\label{classMemControllerBase_a6bf1d9fd5b60dfa7052f176868311cb0}
+
+\item 
+\hypertarget{classMemControllerBase_aca3b9eee9fffbca63cbc58e698840b41}{static const uint32\-\_\-t {\bfseries bw\-Counter\-Num} = 4}\label{classMemControllerBase_aca3b9eee9fffbca63cbc58e698840b41}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+detailed\-\_\-mem.\-h\item 
+detailed\-\_\-mem.\-cpp\end{DoxyCompactItemize}

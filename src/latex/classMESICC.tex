@@ -1,0 +1,56 @@
+\hypertarget{classMESICC}{\section{M\-E\-S\-I\-C\-C Class Reference}
+\label{classMESICC}\index{M\-E\-S\-I\-C\-C@{M\-E\-S\-I\-C\-C}}
+}
+Inheritance diagram for M\-E\-S\-I\-C\-C\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classMESICC}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMESICC_a04c6c7d9cb233a108ee1232fc9fbad85}{{\bfseries M\-E\-S\-I\-C\-C} (uint32\-\_\-t \-\_\-num\-Lines, bool \-\_\-non\-Inclusive\-Hack, g\-\_\-string \&\-\_\-name)}\label{classMESICC_a04c6c7d9cb233a108ee1232fc9fbad85}
+
+\item 
+\hypertarget{classMESICC_a243383c1a22aaad6d4f82466394d5f3d}{void {\bfseries set\-Parents} (uint32\-\_\-t child\-Id, const \hyperlink{classg__vector}{g\-\_\-vector}$<$ \hyperlink{classMemObject}{Mem\-Object} $\ast$ $>$ \&parents, \hyperlink{classNetwork}{Network} $\ast$network)}\label{classMESICC_a243383c1a22aaad6d4f82466394d5f3d}
+
+\item 
+\hypertarget{classMESICC_a521b3f23da4cdeecb2bd1a6b46cde861}{void {\bfseries set\-Children} (const \hyperlink{classg__vector}{g\-\_\-vector}$<$ \hyperlink{classBaseCache}{Base\-Cache} $\ast$ $>$ \&children, \hyperlink{classNetwork}{Network} $\ast$network)}\label{classMESICC_a521b3f23da4cdeecb2bd1a6b46cde861}
+
+\item 
+\hypertarget{classMESICC_a7424c192e0d55b477e036da015e47697}{void {\bfseries init\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$cache\-Stat)}\label{classMESICC_a7424c192e0d55b477e036da015e47697}
+
+\item 
+\hypertarget{classMESICC_adb266df86e3a6455a7384bc8d3958dfc}{bool {\bfseries start\-Access} (\hyperlink{structMemReq}{Mem\-Req} \&req)}\label{classMESICC_adb266df86e3a6455a7384bc8d3958dfc}
+
+\item 
+\hypertarget{classMESICC_adff3fdd77b8eb96e12c854ce3c5496ae}{bool {\bfseries should\-Allocate} (const \hyperlink{structMemReq}{Mem\-Req} \&req)}\label{classMESICC_adff3fdd77b8eb96e12c854ce3c5496ae}
+
+\item 
+\hypertarget{classMESICC_a0489e87c75a299d40c1b06b3660b015f}{uint64\-\_\-t {\bfseries process\-Eviction} (const \hyperlink{structMemReq}{Mem\-Req} \&trigger\-Req, Address wb\-Line\-Addr, int32\-\_\-t line\-Id, uint64\-\_\-t start\-Cycle)}\label{classMESICC_a0489e87c75a299d40c1b06b3660b015f}
+
+\item 
+\hypertarget{classMESICC_aa8e01a308fd975cb06ed958fe79b5f5c}{uint64\-\_\-t {\bfseries process\-Access} (const \hyperlink{structMemReq}{Mem\-Req} \&req, int32\-\_\-t line\-Id, uint64\-\_\-t start\-Cycle, uint64\-\_\-t $\ast$get\-Done\-Cycle=nullptr)}\label{classMESICC_aa8e01a308fd975cb06ed958fe79b5f5c}
+
+\item 
+\hypertarget{classMESICC_a191b816ae3926a67e832e154682d1556}{void {\bfseries end\-Access} (const \hyperlink{structMemReq}{Mem\-Req} \&req)}\label{classMESICC_a191b816ae3926a67e832e154682d1556}
+
+\item 
+\hypertarget{classMESICC_a75c6b7abe753289c3c3e4b63a240bfe0}{void {\bfseries start\-Inv} ()}\label{classMESICC_a75c6b7abe753289c3c3e4b63a240bfe0}
+
+\item 
+\hypertarget{classMESICC_adcf52b6d718a2dde14c7c65dcc9556b0}{uint64\-\_\-t {\bfseries process\-Inv} (const \hyperlink{structInvReq}{Inv\-Req} \&req, int32\-\_\-t line\-Id, uint64\-\_\-t start\-Cycle)}\label{classMESICC_adcf52b6d718a2dde14c7c65dcc9556b0}
+
+\item 
+\hypertarget{classMESICC_afe175acbb1827ab513a14b42bc9c6672}{uint32\-\_\-t {\bfseries num\-Sharers} (uint32\-\_\-t line\-Id)}\label{classMESICC_afe175acbb1827ab513a14b42bc9c6672}
+
+\item 
+\hypertarget{classMESICC_a71f60cbea5b1703241317aca971dccca}{bool {\bfseries is\-Valid} (uint32\-\_\-t line\-Id)}\label{classMESICC_a71f60cbea5b1703241317aca971dccca}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+coherence\-\_\-ctrls.\-h\end{DoxyCompactItemize}

@@ -1,0 +1,153 @@
+\hypertarget{classTimingEvent}{\section{Timing\-Event Class Reference}
+\label{classTimingEvent}\index{Timing\-Event@{Timing\-Event}}
+}
+Inheritance diagram for Timing\-Event\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{classTimingEvent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTimingEvent_afe75538f63e735efa562a170d818abd2}{{\bfseries Timing\-Event} (uint32\-\_\-t \-\_\-pre\-Delay, uint32\-\_\-t \-\_\-post\-Delay, int32\-\_\-t \-\_\-domain=-\/1)}\label{classTimingEvent_afe75538f63e735efa562a170d818abd2}
+
+\item 
+\hypertarget{classTimingEvent_a9cb879fb72ed394efeec28d8aabf2559}{{\bfseries Timing\-Event} (int32\-\_\-t \-\_\-domain=-\/1)}\label{classTimingEvent_a9cb879fb72ed394efeec28d8aabf2559}
+
+\item 
+\hypertarget{classTimingEvent_a8541e32c1c59a979f635bde6c809ebb6}{uint32\-\_\-t {\bfseries get\-Domain} () const }\label{classTimingEvent_a8541e32c1c59a979f635bde6c809ebb6}
+
+\item 
+\hypertarget{classTimingEvent_a700e1a18857fd2292a28d42e146791d3}{uint32\-\_\-t {\bfseries get\-Num\-Children} () const }\label{classTimingEvent_a700e1a18857fd2292a28d42e146791d3}
+
+\item 
+\hypertarget{classTimingEvent_a6835885f10c5af3d2ef2bb1b57459009}{uint32\-\_\-t {\bfseries get\-Pre\-Delay} () const }\label{classTimingEvent_a6835885f10c5af3d2ef2bb1b57459009}
+
+\item 
+\hypertarget{classTimingEvent_a59e2e512d24bb6d2e25ca16752e43c3b}{uint32\-\_\-t {\bfseries get\-Post\-Delay} () const }\label{classTimingEvent_a59e2e512d24bb6d2e25ca16752e43c3b}
+
+\item 
+\hypertarget{classTimingEvent_ac2945c5c46334e344b6e1917edc058ca}{void {\bfseries set\-Pre\-Delay} (uint32\-\_\-t d)}\label{classTimingEvent_ac2945c5c46334e344b6e1917edc058ca}
+
+\item 
+\hypertarget{classTimingEvent_a9034f198649e39bf05e77eca1fe38404}{void {\bfseries set\-Post\-Delay} (uint32\-\_\-t d)}\label{classTimingEvent_a9034f198649e39bf05e77eca1fe38404}
+
+\item 
+\hypertarget{classTimingEvent_ad33a88bae422d9435a81b22e15f45ae6}{uint64\-\_\-t {\bfseries get\-Min\-Start\-Cycle} () const }\label{classTimingEvent_ad33a88bae422d9435a81b22e15f45ae6}
+
+\item 
+\hypertarget{classTimingEvent_add6357681c04aed9525ceac030716db1}{void {\bfseries set\-Min\-Start\-Cycle} (uint64\-\_\-t c)}\label{classTimingEvent_add6357681c04aed9525ceac030716db1}
+
+\item 
+\hypertarget{classTimingEvent_a06d4af1893169b4d7b565259d7cfa38b}{\hyperlink{classTimingEvent}{Timing\-Event} $\ast$ {\bfseries add\-Child} (\hyperlink{classTimingEvent}{Timing\-Event} $\ast$child\-Ev, \hyperlink{classEventRecorder}{Event\-Recorder} $\ast$ev\-Rec)}\label{classTimingEvent_a06d4af1893169b4d7b565259d7cfa38b}
+
+\item 
+\hypertarget{classTimingEvent_a623c3ec34368c4ad014894e54f1761fb}{\hyperlink{classTimingEvent}{Timing\-Event} $\ast$ {\bfseries add\-Child} (\hyperlink{classTimingEvent}{Timing\-Event} $\ast$child\-Ev, \hyperlink{classEventRecorder}{Event\-Recorder} \&ev\-Rec)}\label{classTimingEvent_a623c3ec34368c4ad014894e54f1761fb}
+
+\item 
+virtual void \hyperlink{classTimingEvent_a55e7e2942d6607eb2a9dd484baf39070}{parent\-Done} (uint64\-\_\-t start\-Cycle)
+\item 
+\hypertarget{classTimingEvent_a1eaa3f3f350fb09b9549c4be1dab5091}{void {\bfseries queue} (uint64\-\_\-t q\-Cycle)}\label{classTimingEvent_a1eaa3f3f350fb09b9549c4be1dab5091}
+
+\item 
+\hypertarget{classTimingEvent_a1f737188e07a4f444115f95bf3c1ef7e}{void {\bfseries requeue} (uint64\-\_\-t cycle)}\label{classTimingEvent_a1f737188e07a4f444115f95bf3c1ef7e}
+
+\item 
+\hypertarget{classTimingEvent_a99608e7c0c6bbc199fd7ab3cc6707dea}{virtual void {\bfseries simulate} (uint64\-\_\-t start\-Cycle)=0}\label{classTimingEvent_a99608e7c0c6bbc199fd7ab3cc6707dea}
+
+\item 
+\hypertarget{classTimingEvent_a78fe421d9a91c70ec249630e3aab8780}{void {\bfseries run} (uint64\-\_\-t start\-Cycle)}\label{classTimingEvent_a78fe421d9a91c70ec249630e3aab8780}
+
+\item 
+\hypertarget{classTimingEvent_aa042bb6b4c70456fd81544da49583bbb}{void {\bfseries hold} ()}\label{classTimingEvent_aa042bb6b4c70456fd81544da49583bbb}
+
+\item 
+\hypertarget{classTimingEvent_adbbe5607f59f4278462738064fd839f6}{void {\bfseries release} ()}\label{classTimingEvent_adbbe5607f59f4278462738064fd839f6}
+
+\item 
+\hypertarget{classTimingEvent_a9e2c0c90bd80d105616121374a7d33e1}{void {\bfseries done} (uint64\-\_\-t done\-Cycle)}\label{classTimingEvent_a9e2c0c90bd80d105616121374a7d33e1}
+
+\item 
+\hypertarget{classTimingEvent_a3ec74069d3a97dd192c171a79fef46a4}{void {\bfseries produce\-Crossings} (\hyperlink{classEventRecorder}{Event\-Recorder} $\ast$ev\-Rec)}\label{classTimingEvent_a3ec74069d3a97dd192c171a79fef46a4}
+
+\item 
+\hypertarget{classTimingEvent_a9ecb818af70278d593b7b3532aad03e2}{void $\ast$ {\bfseries operator new} (size\-\_\-t sz, \hyperlink{classEventRecorder}{Event\-Recorder} $\ast$ev\-Rec)}\label{classTimingEvent_a9ecb818af70278d593b7b3532aad03e2}
+
+\item 
+\hypertarget{classTimingEvent_accb87e44bcbb3a7c4393d4f64af87192}{void $\ast$ {\bfseries operator new} (size\-\_\-t sz, \hyperlink{classEventRecorder}{Event\-Recorder} \&ev\-Rec)}\label{classTimingEvent_accb87e44bcbb3a7c4393d4f64af87192}
+
+\item 
+\hypertarget{classTimingEvent_a9efd2a85ed47175399f6a751c109f8a9}{void {\bfseries operator delete} (void $\ast$, size\-\_\-t)}\label{classTimingEvent_a9efd2a85ed47175399f6a751c109f8a9}
+
+\item 
+\hypertarget{classTimingEvent_a51a820e571e6bec1fbc9ed0cb751726a}{void {\bfseries operator delete} (void $\ast$p, \hyperlink{classEventRecorder}{Event\-Recorder} $\ast$ev\-Rec)}\label{classTimingEvent_a51a820e571e6bec1fbc9ed0cb751726a}
+
+\item 
+\hypertarget{classTimingEvent_ac920ad0905f611841f49c6232947a02e}{void {\bfseries operator delete} (void $\ast$p, \hyperlink{classEventRecorder}{Event\-Recorder} \&ev\-Rec)}\label{classTimingEvent_ac920ad0905f611841f49c6232947a02e}
+
+\item 
+\hypertarget{classTimingEvent_ad918cf0b44a8d7298fa4b70b95d04bab}{virtual std\-::string {\bfseries str} ()}\label{classTimingEvent_ad918cf0b44a8d7298fa4b70b95d04bab}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTimingEvent_a019a971b0d26828112a9d46c9f13c88d}{\hyperlink{classTimingEvent}{Timing\-Event} $\ast$ {\bfseries next}}\label{classTimingEvent_a019a971b0d26828112a9d46c9f13c88d}
+
+\item 
+\hypertarget{classTimingEvent_ae9bb9c89858f97ec7aacfa371cca7edd}{\hyperlink{classTimingEvent}{Timing\-Event} $\ast$ {\bfseries child}}\label{classTimingEvent_ae9bb9c89858f97ec7aacfa371cca7edd}
+
+\item 
+\hypertarget{classTimingEvent_a98c9209a0010bea8ed7d5e3e0b46c718}{\hyperlink{structTimingEventBlock}{Timing\-Event\-Block} $\ast$ {\bfseries children}}\label{classTimingEvent_a98c9209a0010bea8ed7d5e3e0b46c718}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTimingEvent_a7051fb745d607c888e614459857f355a}{void {\bfseries set\-Running} ()}\label{classTimingEvent_a7051fb745d607c888e614459857f355a}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTimingEvent_a96b81ec5d9f4b197024c5bd08fc10c38}{class {\bfseries Contention\-Sim}}\label{classTimingEvent_a96b81ec5d9f4b197024c5bd08fc10c38}
+
+\item 
+\hypertarget{classTimingEvent_a04ce3d094c04be49d02f3a13abd8bc81}{class {\bfseries Delay\-Event}}\label{classTimingEvent_a04ce3d094c04be49d02f3a13abd8bc81}
+
+\item 
+\hypertarget{classTimingEvent_a39c74d540b8bf3b5362d5e209404b01f}{class {\bfseries Crossing\-Event}}\label{classTimingEvent_a39c74d540b8bf3b5362d5e209404b01f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classTimingEvent_a55e7e2942d6607eb2a9dd484baf39070}{\index{Timing\-Event@{Timing\-Event}!parent\-Done@{parent\-Done}}
+\index{parent\-Done@{parent\-Done}!TimingEvent@{Timing\-Event}}
+\subsubsection[{parent\-Done}]{\setlength{\rightskip}{0pt plus 5cm}void Timing\-Event\-::parent\-Done (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{start\-Cycle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classTimingEvent_a55e7e2942d6607eb2a9dd484baf39070}
+\$lic\$ Copyright (C) 2012-\/2015 by Massachusetts Institute of Technology Copyright (C) 2010-\/2013 by The Board of Trustees of Stanford University
+
+This file is part of zsim.
+
+zsim is free software; you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, version 2.
+
+If you use this software in your research, we request that you reference the zsim paper (\char`\"{}\-Z\-Sim\-: Fast and Accurate Microarchitectural Simulation of
+\-Thousand-\/\-Core Systems\char`\"{}, Sanchez and Kozyrakis, I\-S\-C\-A-\/40, June 2013) as the source of the simulator in any publications that use this software, and that you send us a citation of your work.
+
+zsim is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. 
+
+Reimplemented in \hyperlink{classCrossingEvent_a96199fafd70da779df838f73f24cb6b5}{Crossing\-Event}, \hyperlink{classDelayEvent_aa1a9ef6d5dc0d8c74f6e2c52d217ef73}{Delay\-Event}, \hyperlink{classSchedEvent_aabd0b9e2eedd6a393aa9fbdb45d8fab4}{Sched\-Event}, \hyperlink{classRefreshEvent_af9afce48ab90b3acbbe9c72bd5f7e552}{Refresh\-Event}, and \hyperlink{classTickEvent_ab044a76691e38747e8a1a4106910fcab}{Tick\-Event$<$ T $>$}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+timing\-\_\-event.\-h\item 
+timing\-\_\-event.\-cpp\end{DoxyCompactItemize}

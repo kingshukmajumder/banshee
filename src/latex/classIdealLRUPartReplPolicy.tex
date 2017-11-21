@@ -1,0 +1,69 @@
+\hypertarget{classIdealLRUPartReplPolicy}{\section{Ideal\-L\-R\-U\-Part\-Repl\-Policy Class Reference}
+\label{classIdealLRUPartReplPolicy}\index{Ideal\-L\-R\-U\-Part\-Repl\-Policy@{Ideal\-L\-R\-U\-Part\-Repl\-Policy}}
+}
+Inheritance diagram for Ideal\-L\-R\-U\-Part\-Repl\-Policy\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classIdealLRUPartReplPolicy}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structIdealLRUPartReplPolicy_1_1Entry}{Entry}
+\item 
+struct \hyperlink{structIdealLRUPartReplPolicy_1_1IdPartInfo}{Id\-Part\-Info}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classIdealLRUPartReplPolicy_a76f9677a013029f467ae6289b9bb51af}{{\bfseries Ideal\-L\-R\-U\-Part\-Repl\-Policy} (\hyperlink{classPartitionMonitor}{Partition\-Monitor} $\ast$\-\_\-monitor, \hyperlink{classPartMapper}{Part\-Mapper} $\ast$\-\_\-mapper, uint32\-\_\-t \-\_\-num\-Lines, uint32\-\_\-t \-\_\-num\-Buckets)}\label{classIdealLRUPartReplPolicy_a76f9677a013029f467ae6289b9bb51af}
+
+\item 
+\hypertarget{classIdealLRUPartReplPolicy_a005d5fcb68c06b418eb0ccebcebcd833}{void {\bfseries init\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$parent\-Stat)}\label{classIdealLRUPartReplPolicy_a005d5fcb68c06b418eb0ccebcebcd833}
+
+\item 
+\hypertarget{classIdealLRUPartReplPolicy_acf0338dd7fa8e41ba79f1941aa60a67c}{void {\bfseries set\-Partition\-Sizes} (const uint32\-\_\-t $\ast$sizes)}\label{classIdealLRUPartReplPolicy_acf0338dd7fa8e41ba79f1941aa60a67c}
+
+\item 
+\hypertarget{classIdealLRUPartReplPolicy_a8d1da4cc3170f608737c400221114ac5}{void {\bfseries update} (uint32\-\_\-t id, const \hyperlink{structMemReq}{Mem\-Req} $\ast$req)}\label{classIdealLRUPartReplPolicy_a8d1da4cc3170f608737c400221114ac5}
+
+\item 
+\hypertarget{classIdealLRUPartReplPolicy_a9c5af0e93e754830f267fa9a5e81967c}{void {\bfseries replaced} (uint32\-\_\-t id)}\label{classIdealLRUPartReplPolicy_a9c5af0e93e754830f267fa9a5e81967c}
+
+\item 
+\hypertarget{classIdealLRUPartReplPolicy_a1b346d9edf01a4b38720782ef261ebba}{uint32\-\_\-t {\bfseries rank} (const \hyperlink{structMemReq}{Mem\-Req} $\ast$req)}\label{classIdealLRUPartReplPolicy_a1b346d9edf01a4b38720782ef261ebba}
+
+\item 
+\hypertarget{classIdealLRUPartReplPolicy_ae8d8a5ab116569a643ff191bb4848a59}{{\footnotesize template$<$typename C $>$ }\\uint32\-\_\-t {\bfseries rank} (const \hyperlink{structMemReq}{Mem\-Req} $\ast$req, C cands)}\label{classIdealLRUPartReplPolicy_ae8d8a5ab116569a643ff191bb4848a59}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classIdealLRUPartReplPolicy_a2f7060fb9a38de21c7312d17bcd0eb0d}{{\bfseries D\-E\-C\-L\-\_\-\-R\-A\-N\-K\-\_\-\-B\-I\-N\-D\-I\-N\-G\-S}}\label{classIdealLRUPartReplPolicy_a2f7060fb9a38de21c7312d17bcd0eb0d}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classIdealLRUPartReplPolicy_a029b993b311cd5d260fc831216105dd5}{\hyperlink{structIdealLRUPartReplPolicy_1_1Entry}{Entry} $\ast$ {\bfseries array}}\label{classIdealLRUPartReplPolicy_a029b993b311cd5d260fc831216105dd5}
+
+\item 
+\hypertarget{classIdealLRUPartReplPolicy_a496bfae1cdf483997395949426ca0799}{\hyperlink{structIdealLRUPartReplPolicy_1_1IdPartInfo}{Id\-Part\-Info} $\ast$ {\bfseries part\-Info}}\label{classIdealLRUPartReplPolicy_a496bfae1cdf483997395949426ca0799}
+
+\item 
+\hypertarget{classIdealLRUPartReplPolicy_a9dfaf286a21c022139a36ed10d94e3bf}{uint32\-\_\-t {\bfseries partitions}}\label{classIdealLRUPartReplPolicy_a9dfaf286a21c022139a36ed10d94e3bf}
+
+\item 
+\hypertarget{classIdealLRUPartReplPolicy_aacf66826621b4e88242f767bafc98705}{uint32\-\_\-t {\bfseries num\-Lines}}\label{classIdealLRUPartReplPolicy_aacf66826621b4e88242f767bafc98705}
+
+\item 
+\hypertarget{classIdealLRUPartReplPolicy_aaca59e41a732517b26e87259f0fa589b}{uint32\-\_\-t {\bfseries num\-Buckets}}\label{classIdealLRUPartReplPolicy_aaca59e41a732517b26e87259f0fa589b}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+ideal\-\_\-arrays.\-h\end{DoxyCompactItemize}

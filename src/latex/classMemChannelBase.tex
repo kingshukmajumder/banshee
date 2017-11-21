@@ -1,0 +1,112 @@
+\hypertarget{classMemChannelBase}{\section{Mem\-Channel\-Base Class Reference}
+\label{classMemChannelBase}\index{Mem\-Channel\-Base@{Mem\-Channel\-Base}}
+}
+Inheritance diagram for Mem\-Channel\-Base\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMemChannelBase}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMemChannelBase_a2e476e5df6a1f1a2af74176f5f430780}{{\bfseries Mem\-Channel\-Base} (uint32\-\_\-t \-\_\-my\-Id, \hyperlink{classMemParam}{Mem\-Param} $\ast$\-\_\-m\-Param)}\label{classMemChannelBase_a2e476e5df6a1f1a2af74176f5f430780}
+
+\item 
+\hypertarget{classMemChannelBase_a5fb78770709c769c6d0f360420b7ff3c}{virtual uint64\-\_\-t {\bfseries Latency\-Simulate} (Address line\-Addr, uint64\-\_\-t arrival\-Cycle, uint64\-\_\-t last\-Phase\-Cycle, Mem\-Access\-Type type)}\label{classMemChannelBase_a5fb78770709c769c6d0f360420b7ff3c}
+
+\item 
+\hypertarget{classMemChannelBase_a48733e49e1666216025e1881f4fa061e}{virtual void {\bfseries Address\-Map} (Address addr, uint32\-\_\-t \&row, uint32\-\_\-t \&col, uint32\-\_\-t \&rank, uint32\-\_\-t \&bank)}\label{classMemChannelBase_a48733e49e1666216025e1881f4fa061e}
+
+\item 
+\hypertarget{classMemChannelBase_a7e37609da4d99dcf76b94e85e76d6f3d}{bool {\bfseries Is\-Row\-Buffer\-Hit} (uint32\-\_\-t row, uint32\-\_\-t rank, uint32\-\_\-t bank)}\label{classMemChannelBase_a7e37609da4d99dcf76b94e85e76d6f3d}
+
+\item 
+\hypertarget{classMemChannelBase_a20d5444e086ec2ecb502eeb2bcf198ca}{virtual uint64\-\_\-t {\bfseries Get\-Activate\-Count} (void)}\label{classMemChannelBase_a20d5444e086ec2ecb502eeb2bcf198ca}
+
+\item 
+\hypertarget{classMemChannelBase_a42edfd2e48dc62f4736ad0fb341673ea}{virtual uint64\-\_\-t {\bfseries Get\-Precharge\-Count} (void)}\label{classMemChannelBase_a42edfd2e48dc62f4736ad0fb341673ea}
+
+\item 
+\hypertarget{classMemChannelBase_af57764a13bc54314580b76f93b36e06e}{virtual uint64\-\_\-t {\bfseries Get\-Refresh\-Count} (void)}\label{classMemChannelBase_af57764a13bc54314580b76f93b36e06e}
+
+\item 
+\hypertarget{classMemChannelBase_ac4fe84eb254e133f47708a32c9a86c01}{virtual uint64\-\_\-t {\bfseries Get\-Burst\-Energy} (void)}\label{classMemChannelBase_ac4fe84eb254e133f47708a32c9a86c01}
+
+\item 
+\hypertarget{classMemChannelBase_acc0b3c449b8510255366da62f21b32a2}{virtual uint64\-\_\-t {\bfseries Get\-Act\-Pre\-Energy} (void)}\label{classMemChannelBase_acc0b3c449b8510255366da62f21b32a2}
+
+\item 
+\hypertarget{classMemChannelBase_a380b6b65ddbc0de0d9bb3ecc199d85c0}{virtual uint64\-\_\-t {\bfseries Get\-Refresh\-Energy} (void)}\label{classMemChannelBase_a380b6b65ddbc0de0d9bb3ecc199d85c0}
+
+\item 
+\hypertarget{classMemChannelBase_a9c734e2143117c54de9f98054dad2ca7}{virtual uint64\-\_\-t {\bfseries Get\-Back\-Ground\-Energy} (uint64\-\_\-t mem\-Cycle, uint64\-\_\-t last\-Mem\-Cycle, bool b\-Instant=false)}\label{classMemChannelBase_a9c734e2143117c54de9f98054dad2ca7}
+
+\item 
+\hypertarget{classMemChannelBase_a796fe1cfd947821d2127f1b2acd1541f}{virtual void {\bfseries Periodic\-Update\-Power} (uint64\-\_\-t phase\-Cycle, uint64\-\_\-t last\-Phase\-Cycle)}\label{classMemChannelBase_a796fe1cfd947821d2127f1b2acd1541f}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMemChannelBase_afcd52ed68d557269656f7a924439d8da}{virtual uint32\-\_\-t {\bfseries Update\-Refresh\-Num} (uint32\-\_\-t rank, uint64\-\_\-t arrival\-Cycle)}\label{classMemChannelBase_afcd52ed68d557269656f7a924439d8da}
+
+\item 
+\hypertarget{classMemChannelBase_afe808ac3c91971d3ca2c6abc102a74b4}{virtual uint64\-\_\-t {\bfseries Update\-Last\-Refresh\-Cycle} (uint32\-\_\-t rank, uint64\-\_\-t arrival\-Cycle, uint32\-\_\-t refresh\-Num)}\label{classMemChannelBase_afe808ac3c91971d3ca2c6abc102a74b4}
+
+\item 
+\hypertarget{classMemChannelBase_afb623d60de5b36bebb39d9e21827f6e8}{virtual void {\bfseries Update\-Power\-Down\-Cycle} (uint32\-\_\-t rank, uint64\-\_\-t arrival\-Cycle, uint64\-\_\-t last\-Phase\-Cycle, uint32\-\_\-t refresh\-Num)}\label{classMemChannelBase_afb623d60de5b36bebb39d9e21827f6e8}
+
+\item 
+\hypertarget{classMemChannelBase_aeb0400d262f6c664792449f8253e05ba}{virtual void {\bfseries Update\-Data\-Bus\-Cycle} (uint64\-\_\-t start, uint64\-\_\-t end)}\label{classMemChannelBase_aeb0400d262f6c664792449f8253e05ba}
+
+\item 
+\hypertarget{classMemChannelBase_ac93aad272161b449246548a4e273431d}{virtual void {\bfseries Issue\-Activate} (uint32\-\_\-t rank, uint32\-\_\-t bank, uint64\-\_\-t issued\-Cycle)}\label{classMemChannelBase_ac93aad272161b449246548a4e273431d}
+
+\item 
+\hypertarget{classMemChannelBase_af92d30734305756e52a9b2e2b2b6bf0c}{virtual void {\bfseries Issue\-Precharge} (uint32\-\_\-t rank, uint32\-\_\-t bank, uint64\-\_\-t issued\-Cycle, bool continuous=false)}\label{classMemChannelBase_af92d30734305756e52a9b2e2b2b6bf0c}
+
+\item 
+\hypertarget{classMemChannelBase_afb3cbd4a7c94e0e864405e400b89d4b1}{virtual uint64\-\_\-t {\bfseries Calc\-Intra\-Issue\-Cycle} (bool row\-Hit, uint32\-\_\-t rank, Mem\-Access\-Type type, uint64\-\_\-t arrival\-Cycle, uint32\-\_\-t refresh\-Num)}\label{classMemChannelBase_afb3cbd4a7c94e0e864405e400b89d4b1}
+
+\item 
+\hypertarget{classMemChannelBase_a004618cbad63872b77f73fb46507ae88}{virtual uint64\-\_\-t {\bfseries Calc\-Inter\-Issue\-Cycle} (Mem\-Access\-Type type, uint64\-\_\-t arrival\-Cycle)}\label{classMemChannelBase_a004618cbad63872b77f73fb46507ae88}
+
+\item 
+\hypertarget{classMemChannelBase_a9808754c103a7cb6700d19176db56826}{virtual uint64\-\_\-t {\bfseries Calc\-Act\-Const} (uint32\-\_\-t rank, uint32\-\_\-t bank, uint64\-\_\-t issuable\-Cycle)}\label{classMemChannelBase_a9808754c103a7cb6700d19176db56826}
+
+\item 
+\hypertarget{classMemChannelBase_aa3596a5a18c951ca3df722459589e7bd}{virtual uint64\-\_\-t {\bfseries Calc\-Pre\-Const} (uint32\-\_\-t rank, uint32\-\_\-t bank, Mem\-Access\-Type type, uint64\-\_\-t issuable\-Cycle)}\label{classMemChannelBase_aa3596a5a18c951ca3df722459589e7bd}
+
+\item 
+\hypertarget{classMemChannelBase_aabd0c4decaa154fca93cd7809cd5eae5}{virtual uint64\-\_\-t {\bfseries Calc\-Rd\-Wr\-Const} (uint32\-\_\-t rank, Mem\-Access\-Type type, uint64\-\_\-t issuable\-Cycle)}\label{classMemChannelBase_aabd0c4decaa154fca93cd7809cd5eae5}
+
+\item 
+\hypertarget{classMemChannelBase_a94f245dd5873c65df9b97901a7339e1f}{virtual uint32\-\_\-t {\bfseries Get\-Power\-Down\-Penalty} (uint32\-\_\-t rank, uint64\-\_\-t arrival\-Cycle)}\label{classMemChannelBase_a94f245dd5873c65df9b97901a7339e1f}
+
+\item 
+\hypertarget{classMemChannelBase_a3e58cb7900f1ee33c067f09285ef8e81}{virtual bool {\bfseries Check\-Continuous\-Access} (uint64\-\_\-t arrival\-Cycle, uint32\-\_\-t rank, uint32\-\_\-t bank, uint32\-\_\-t row)}\label{classMemChannelBase_a3e58cb7900f1ee33c067f09285ef8e81}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMemChannelBase_a7a8fb00f3696fe94d0481cae51ac465d}{uint32\-\_\-t {\bfseries my\-Id}}\label{classMemChannelBase_a7a8fb00f3696fe94d0481cae51ac465d}
+
+\item 
+\hypertarget{classMemChannelBase_ad7f8f8563be92ce36d94dbccf7ef1087}{\hyperlink{classMemParam}{Mem\-Param} $\ast$ {\bfseries m\-Param}}\label{classMemChannelBase_ad7f8f8563be92ce36d94dbccf7ef1087}
+
+\item 
+\hypertarget{classMemChannelBase_aaf66ca50858e84f178b4c8bd33906950}{\hyperlink{classg__vector}{g\-\_\-vector}$<$ \hyperlink{classMemRankBase}{Mem\-Rank\-Base} $\ast$ $>$ {\bfseries ranks}}\label{classMemChannelBase_aaf66ca50858e84f178b4c8bd33906950}
+
+\item 
+\hypertarget{classMemChannelBase_ac8d24b0f4f6f2aa7c0cb5f28e192f39d}{std\-::vector$<$ std\-::pair\\*
+$<$ uint64\-\_\-t, uint64\-\_\-t $>$ $>$ {\bfseries access\-Log}}\label{classMemChannelBase_ac8d24b0f4f6f2aa7c0cb5f28e192f39d}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+detailed\-\_\-mem.\-h\item 
+detailed\-\_\-mem.\-cpp\end{DoxyCompactItemize}

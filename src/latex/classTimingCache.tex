@@ -1,0 +1,43 @@
+\hypertarget{classTimingCache}{\section{Timing\-Cache Class Reference}
+\label{classTimingCache}\index{Timing\-Cache@{Timing\-Cache}}
+}
+Inheritance diagram for Timing\-Cache\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classTimingCache}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classTimingCache_a862b430cb85b75ddf4bbb8038f7c15e5}{{\bfseries Timing\-Cache} (uint32\-\_\-t \-\_\-num\-Lines, \hyperlink{classCC}{C\-C} $\ast$\-\_\-cc, \hyperlink{classCacheArray}{Cache\-Array} $\ast$\-\_\-array, \hyperlink{classReplPolicy}{Repl\-Policy} $\ast$\-\_\-rp, uint32\-\_\-t \-\_\-acc\-Lat, uint32\-\_\-t \-\_\-inv\-Lat, uint32\-\_\-t mshrs, uint32\-\_\-t tag\-Lat, uint32\-\_\-t ways, uint32\-\_\-t cands, uint32\-\_\-t \-\_\-domain, const g\-\_\-string \&\-\_\-name)}\label{classTimingCache_a862b430cb85b75ddf4bbb8038f7c15e5}
+
+\item 
+\hypertarget{classTimingCache_a9583021c6cd082d567a4b9e7f41ab2f6}{void {\bfseries init\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$parent\-Stat)}\label{classTimingCache_a9583021c6cd082d567a4b9e7f41ab2f6}
+
+\item 
+\hypertarget{classTimingCache_abb38c207c0421313352ba62bda3d6ac1}{uint64\-\_\-t {\bfseries access} (\hyperlink{structMemReq}{Mem\-Req} \&req)}\label{classTimingCache_abb38c207c0421313352ba62bda3d6ac1}
+
+\item 
+\hypertarget{classTimingCache_ae98f61c668a3cdf2bad116e15af963a0}{void {\bfseries simulate\-Hit} (\hyperlink{classHitEvent}{Hit\-Event} $\ast$ev, uint64\-\_\-t cycle)}\label{classTimingCache_ae98f61c668a3cdf2bad116e15af963a0}
+
+\item 
+\hypertarget{classTimingCache_ac32b5bc9d2b3a18e551bba9e3a332242}{void {\bfseries simulate\-Miss\-Start} (\hyperlink{classMissStartEvent}{Miss\-Start\-Event} $\ast$ev, uint64\-\_\-t cycle)}\label{classTimingCache_ac32b5bc9d2b3a18e551bba9e3a332242}
+
+\item 
+\hypertarget{classTimingCache_a77a6afaecb3c06558bd36cb0cfee02ac}{void {\bfseries simulate\-Miss\-Response} (\hyperlink{classMissResponseEvent}{Miss\-Response\-Event} $\ast$ev, uint64\-\_\-t cycle, \hyperlink{classMissStartEvent}{Miss\-Start\-Event} $\ast$mse)}\label{classTimingCache_a77a6afaecb3c06558bd36cb0cfee02ac}
+
+\item 
+\hypertarget{classTimingCache_a34fb792dcc77dfe79ba6728742748826}{void {\bfseries simulate\-Miss\-Writeback} (\hyperlink{classMissWritebackEvent}{Miss\-Writeback\-Event} $\ast$ev, uint64\-\_\-t cycle, \hyperlink{classMissStartEvent}{Miss\-Start\-Event} $\ast$mse)}\label{classTimingCache_a34fb792dcc77dfe79ba6728742748826}
+
+\item 
+\hypertarget{classTimingCache_a7f073cf69fdac72bad8441c8bc5c3d62}{void {\bfseries simulate\-Repl\-Access} (\hyperlink{classReplAccessEvent}{Repl\-Access\-Event} $\ast$ev, uint64\-\_\-t cycle)}\label{classTimingCache_a7f073cf69fdac72bad8441c8bc5c3d62}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+timing\-\_\-cache.\-h\item 
+timing\-\_\-cache.\-cpp\end{DoxyCompactItemize}

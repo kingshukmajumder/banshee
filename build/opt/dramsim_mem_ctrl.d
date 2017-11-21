@@ -8,4 +8,5 @@ build/opt/dramsim_mem_ctrl.os: build/opt/dramsim_mem_ctrl.cpp \
  build/opt/tick_event.h build/opt/contention_sim.h build/opt/bithacks.h \
  build/opt/prio_queue.h build/opt/g_std/g_multimap.h \
  build/opt/profile_stats.h build/opt/timing_event.h build/opt/zsim.h \
- build/opt/constants.h build/opt/debug.h
+ build/opt/constants.h build/opt/debug.h build/opt/DRAMSim.h \
+ build/opt/Callback.h

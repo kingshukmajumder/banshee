@@ -1,0 +1,102 @@
+\hypertarget{classScheduler}{\section{Scheduler Class Reference}
+\label{classScheduler}\index{Scheduler@{Scheduler}}
+}
+
+
+{\ttfamily \#include $<$scheduler.\-h$>$}
+
+Inheritance diagram for Scheduler\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classScheduler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classScheduler_a678fa728dd18dc9682bda160eefc71b7}{{\bfseries Scheduler} (void($\ast$\-\_\-at\-Sync\-Func)(void), uint32\-\_\-t \-\_\-parallel\-Threads, uint32\-\_\-t \-\_\-num\-Cores, uint32\-\_\-t \-\_\-sched\-Quantum)}\label{classScheduler_a678fa728dd18dc9682bda160eefc71b7}
+
+\item 
+\hypertarget{classScheduler_a3b3f1c768e104463ee975cb6543c59f9}{void {\bfseries init\-Stats} (\hyperlink{classAggregateStat}{Aggregate\-Stat} $\ast$parent\-Stat)}\label{classScheduler_a3b3f1c768e104463ee975cb6543c59f9}
+
+\item 
+\hypertarget{classScheduler_ada122eeb910e25f1175acb6d2cbe83d9}{void {\bfseries start} (uint32\-\_\-t pid, uint32\-\_\-t tid, const \hyperlink{classg__vector}{g\-\_\-vector}$<$ bool $>$ \&mask)}\label{classScheduler_ada122eeb910e25f1175acb6d2cbe83d9}
+
+\item 
+\hypertarget{classScheduler_a8f7a249370a940ced83b4515d77d7d2d}{void {\bfseries finish} (uint32\-\_\-t pid, uint32\-\_\-t tid)}\label{classScheduler_a8f7a249370a940ced83b4515d77d7d2d}
+
+\item 
+\hypertarget{classScheduler_a619b5b66a36bd8bb67cb61eabbceffa5}{uint32\-\_\-t {\bfseries join} (uint32\-\_\-t pid, uint32\-\_\-t tid)}\label{classScheduler_a619b5b66a36bd8bb67cb61eabbceffa5}
+
+\item 
+\hypertarget{classScheduler_af07c3a060dc6526314293e50d742e8e1}{void {\bfseries leave} (uint32\-\_\-t pid, uint32\-\_\-t tid, uint32\-\_\-t cid)}\label{classScheduler_af07c3a060dc6526314293e50d742e8e1}
+
+\item 
+\hypertarget{classScheduler_ac44185577c19d4afc2d592696550a7d8}{uint32\-\_\-t {\bfseries sync} (uint32\-\_\-t pid, uint32\-\_\-t tid, uint32\-\_\-t cid)}\label{classScheduler_ac44185577c19d4afc2d592696550a7d8}
+
+\item 
+\hypertarget{classScheduler_abdfd882aca8d4d3cdbe7cc2c0161a1ff}{virtual void {\bfseries callback} ()}\label{classScheduler_abdfd882aca8d4d3cdbe7cc2c0161a1ff}
+
+\item 
+\hypertarget{classScheduler_a8140a51d4ef2b55bc29b819f28f76b5e}{volatile uint32\-\_\-t $\ast$ {\bfseries mark\-For\-Sleep} (uint32\-\_\-t pid, uint32\-\_\-t tid, uint64\-\_\-t wakeup\-Phase)}\label{classScheduler_a8140a51d4ef2b55bc29b819f28f76b5e}
+
+\item 
+\hypertarget{classScheduler_a59ed4da4a484b2a736e06f32f62b6110}{bool {\bfseries is\-Sleeping} (uint32\-\_\-t pid, uint32\-\_\-t tid)}\label{classScheduler_a59ed4da4a484b2a736e06f32f62b6110}
+
+\item 
+\hypertarget{classScheduler_a9b2f33234735461120ecfd51d43bf107}{void {\bfseries notify\-Sleep\-End} (uint32\-\_\-t pid, uint32\-\_\-t tid)}\label{classScheduler_a9b2f33234735461120ecfd51d43bf107}
+
+\item 
+\hypertarget{classScheduler_a923741f4201a1c333fc2330f9f47a946}{void {\bfseries print\-Thread\-State} (uint32\-\_\-t pid, uint32\-\_\-t tid)}\label{classScheduler_a923741f4201a1c333fc2330f9f47a946}
+
+\item 
+\hypertarget{classScheduler_aa2e98eac3b53295634ae8205415dfbc9}{void {\bfseries notify\-Termination} ()}\label{classScheduler_aa2e98eac3b53295634ae8205415dfbc9}
+
+\item 
+\hypertarget{classScheduler_ad640338d9b2dabbce9a8cffd3d7646f6}{void {\bfseries process\-Cleanup} (uint32\-\_\-t pid)}\label{classScheduler_ad640338d9b2dabbce9a8cffd3d7646f6}
+
+\item 
+\hypertarget{classScheduler_af66820699b9a767d829e8e0972d9ae12}{void {\bfseries queue\-Process\-Cleanup} (uint32\-\_\-t pid, uint32\-\_\-t os\-Pid)}\label{classScheduler_af66820699b9a767d829e8e0972d9ae12}
+
+\item 
+\hypertarget{classScheduler_a03e71af59d59d45c7e0634f1755bbf53}{uint32\-\_\-t {\bfseries get\-Scheduled\-Pid} (uint32\-\_\-t cid) const }\label{classScheduler_a03e71af59d59d45c7e0634f1755bbf53}
+
+\item 
+\hypertarget{classScheduler_a739d30a22b9607531ac2edd7067de6a4}{void {\bfseries syscall\-Leave} (uint32\-\_\-t pid, uint32\-\_\-t tid, uint32\-\_\-t cid, uint64\-\_\-t pc, int syscall\-Number, uint64\-\_\-t arg0, uint64\-\_\-t arg1)}\label{classScheduler_a739d30a22b9607531ac2edd7067de6a4}
+
+\item 
+\hypertarget{classScheduler_a468d55223c4d9f35dcef4560af08db02}{void {\bfseries notify\-Futex\-Wake\-Start} (uint32\-\_\-t pid, uint32\-\_\-t tid, uint32\-\_\-t max\-Wakes)}\label{classScheduler_a468d55223c4d9f35dcef4560af08db02}
+
+\item 
+\hypertarget{classScheduler_ae753f04c09271e92605bec305a9dc572}{void {\bfseries notify\-Futex\-Wake\-End} (uint32\-\_\-t pid, uint32\-\_\-t tid, uint32\-\_\-t woken\-Up)}\label{classScheduler_ae753f04c09271e92605bec305a9dc572}
+
+\item 
+\hypertarget{classScheduler_a3c95a5d0c8b40e411bbe95f249dfaafc}{void {\bfseries notify\-Futex\-Wait\-Woken} (uint32\-\_\-t pid, uint32\-\_\-t tid)}\label{classScheduler_a3c95a5d0c8b40e411bbe95f249dfaafc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\$glic\$ Copyright (C) 2012-\/2015 by Massachusetts Institute of Technology Copyright (C) 2010-\/2013 by The Board of Trustees of Stanford University Copyright (C) 2011 Google Inc.
+
+This file is part of zsim.
+
+zsim is free software; you can redistribute it and/or modify it under the terms of the G\-N\-U General Public License as published by the Free Software Foundation, version 2.
+
+If you use this software in your research, we request that you reference the zsim paper (\char`\"{}\-Z\-Sim\-: Fast and Accurate Microarchitectural Simulation of
+\-Thousand-\/\-Core Systems\char`\"{}, Sanchez and Kozyrakis, I\-S\-C\-A-\/40, June 2013) as the source of the simulator in any publications that use this software, and that you send us a citation of your work.
+
+zsim is distributed in the hope that it will be useful, but W\-I\-T\-H\-O\-U\-T A\-N\-Y W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or F\-I\-T\-N\-E\-S\-S F\-O\-R A P\-A\-R\-T\-I\-C\-U\-L\-A\-R P\-U\-R\-P\-O\-S\-E. See the G\-N\-U General Public License for more details.
+
+You should have received a copy of the G\-N\-U General Public License along with this program. If not, see \href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}. T\-O\-D\-O (dsm)\-: This class is due for a heavy pass or rewrite. Some things are more complex than they should\-:
+\begin{DoxyItemize}
+\item The O\-U\-T state is unnecessary. It is done as a weak link between a thread that left and its context to preserve affinity, but there are far easier ways to implement this.
+\item Should allow for complete separation of scheduling policies. Done to some degree (sched\-Context, etc.), but it should be cleaner.
+\item wakeup() takes a needs\-Join param that is computed per thread, but the barrier operates per core. This discrepancy manifests itself in a corner case\-: if we kill a process, the watchdog reclaims its slots, and the system is overcommitted, sometimes we don't do a join when we should.
+\item It should be clearer who transisions threads/contexts among states (the thread taking the context, the one giving the context?), I think this can potentially lead to races. 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+scheduler.\-h\item 
+scheduler.\-cpp\end{DoxyCompactItemize}

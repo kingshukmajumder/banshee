@@ -1,0 +1,78 @@
+\hypertarget{classProcessTreeNode}{\section{Process\-Tree\-Node Class Reference}
+\label{classProcessTreeNode}\index{Process\-Tree\-Node@{Process\-Tree\-Node}}
+}
+Inheritance diagram for Process\-Tree\-Node\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classProcessTreeNode}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classProcessTreeNode_adb6f2f57b0c7dfb4459c421dd642db9f}{{\bfseries Process\-Tree\-Node} (uint32\-\_\-t \-\_\-proc\-Idx, uint32\-\_\-t \-\_\-group\-Idx, bool \-\_\-in\-Fast\-Forward, bool \-\_\-in\-Pause, const Synced\-Fast\-Forward\-Mode \&\-\_\-synced\-Fast\-Forward, uint32\-\_\-t \-\_\-clock\-Domain, uint32\-\_\-t \-\_\-port\-Domain, uint64\-\_\-t \-\_\-dump\-Heartbeats, bool \-\_\-dumps\-Reset\-Heartbeats, uint32\-\_\-t \-\_\-restarts, const \hyperlink{classg__vector}{g\-\_\-vector}$<$ bool $>$ \&\-\_\-mask, const \hyperlink{classg__vector}{g\-\_\-vector}$<$ uint64\-\_\-t $>$ \&\-\_\-ffi\-Points, const g\-\_\-string \&\-\_\-syscall\-Blacklist\-Regex, const char $\ast$\-\_\-patch\-Root)}\label{classProcessTreeNode_adb6f2f57b0c7dfb4459c421dd642db9f}
+
+\item 
+\hypertarget{classProcessTreeNode_a9d6d52ef8c9bc5222b434db0dc7e5b30}{void {\bfseries add\-Child} (\hyperlink{classProcessTreeNode}{Process\-Tree\-Node} $\ast$child)}\label{classProcessTreeNode_a9d6d52ef8c9bc5222b434db0dc7e5b30}
+
+\item 
+\hypertarget{classProcessTreeNode_a7adddbecca58d0bdf6937e6019e47447}{\hyperlink{classProcessTreeNode}{Process\-Tree\-Node} $\ast$ {\bfseries get\-Next\-Child} ()}\label{classProcessTreeNode_a7adddbecca58d0bdf6937e6019e47447}
+
+\item 
+\hypertarget{classProcessTreeNode_aba159f52890875d4869f002c3748a8db}{uint32\-\_\-t {\bfseries get\-Proc\-Idx} () const }\label{classProcessTreeNode_aba159f52890875d4869f002c3748a8db}
+
+\item 
+\hypertarget{classProcessTreeNode_a2b7ca370831a0b647b52e8ef908e08ae}{uint32\-\_\-t {\bfseries get\-Group\-Idx} () const }\label{classProcessTreeNode_a2b7ca370831a0b647b52e8ef908e08ae}
+
+\item 
+\hypertarget{classProcessTreeNode_af42f3f697cb40a638e11ec922206a69e}{bool {\bfseries notify\-Start} ()}\label{classProcessTreeNode_af42f3f697cb40a638e11ec922206a69e}
+
+\item 
+\hypertarget{classProcessTreeNode_a6e9072197aed03980e448dbc5f851774}{bool {\bfseries notify\-End} () \-\_\-\-\_\-attribute\-\_\-\-\_\-((warn\-\_\-unused\-\_\-result))}\label{classProcessTreeNode_a6e9072197aed03980e448dbc5f851774}
+
+\item 
+\hypertarget{classProcessTreeNode_a7541e5e49b730a7c9ae5775c387a8cb6}{void {\bfseries heartbeat} ()}\label{classProcessTreeNode_a7541e5e49b730a7c9ae5775c387a8cb6}
+
+\item 
+\hypertarget{classProcessTreeNode_a2054dea12a92bb94d761f5733de60efd}{const char $\ast$ {\bfseries get\-Patch\-Root} () const }\label{classProcessTreeNode_a2054dea12a92bb94d761f5733de60efd}
+
+\item 
+\hypertarget{classProcessTreeNode_a7deae7f3565b6e87b2f209a9983d9f98}{bool {\bfseries is\-In\-Fast\-Forward} () const }\label{classProcessTreeNode_a7deae7f3565b6e87b2f209a9983d9f98}
+
+\item 
+\hypertarget{classProcessTreeNode_a0bdc9036d26d48e7dce73ee80f9bf44a}{bool {\bfseries is\-In\-Pause} () const }\label{classProcessTreeNode_a0bdc9036d26d48e7dce73ee80f9bf44a}
+
+\item 
+\hypertarget{classProcessTreeNode_a5cc9ac7217b92e33142cedf9c94daf40}{bool {\bfseries get\-Synced\-Fast\-Forward} () const }\label{classProcessTreeNode_a5cc9ac7217b92e33142cedf9c94daf40}
+
+\item 
+\hypertarget{classProcessTreeNode_af0f14d6530f1ad19ff7af6b321e894f2}{void {\bfseries enter\-Fast\-Forward} ()}\label{classProcessTreeNode_af0f14d6530f1ad19ff7af6b321e894f2}
+
+\item 
+\hypertarget{classProcessTreeNode_a09d1b9ef0e2c10b85753f7b8b2344e9e}{void {\bfseries exit\-Fast\-Forward} ()}\label{classProcessTreeNode_a09d1b9ef0e2c10b85753f7b8b2344e9e}
+
+\item 
+\hypertarget{classProcessTreeNode_a6b4d0c0d7a099378856671c648da00a7}{uint32\-\_\-t {\bfseries get\-Clock\-Domain} () const }\label{classProcessTreeNode_a6b4d0c0d7a099378856671c648da00a7}
+
+\item 
+\hypertarget{classProcessTreeNode_a58bd8acdc55860dc78035b4b02a361cd}{uint32\-\_\-t {\bfseries get\-Port\-Domain} () const }\label{classProcessTreeNode_a58bd8acdc55860dc78035b4b02a361cd}
+
+\item 
+\hypertarget{classProcessTreeNode_a43f7a69a5782d826a93a139df2d2ef4d}{void {\bfseries exit\-Pause} ()}\label{classProcessTreeNode_a43f7a69a5782d826a93a139df2d2ef4d}
+
+\item 
+\hypertarget{classProcessTreeNode_aabd4c5d6d0999280747eda6333e0a8a1}{const \hyperlink{classg__vector}{g\-\_\-vector}$<$ bool $>$ \& {\bfseries get\-Mask} () const }\label{classProcessTreeNode_aabd4c5d6d0999280747eda6333e0a8a1}
+
+\item 
+\hypertarget{classProcessTreeNode_a74efcea43d5a091816035483cb98e8b7}{const \hyperlink{classg__vector}{g\-\_\-vector}$<$ uint64\-\_\-t $>$ \& {\bfseries get\-F\-F\-I\-Points} () const }\label{classProcessTreeNode_a74efcea43d5a091816035483cb98e8b7}
+
+\item 
+\hypertarget{classProcessTreeNode_a6c3b641be0e6727060ef2723fd2d8435}{const g\-\_\-string \& {\bfseries get\-Syscall\-Blacklist\-Regex} () const }\label{classProcessTreeNode_a6c3b641be0e6727060ef2723fd2d8435}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+process\-\_\-tree.\-h\item 
+process\-\_\-tree.\-cpp\end{DoxyCompactItemize}
