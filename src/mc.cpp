@@ -50,6 +50,9 @@ MemoryController::MemoryController(g_string& name, uint32_t frequency, uint32_t 
 		// 4KB page or 2MB page
 		assert(_granularity == 4096 || _granularity == 4096 * 512); 
 		_scheme = HybridCache;
+	} else if (scheme == "ABCache") {
+		assert(_granularity == 4096 || _granularity == 4096 * 512); 
+		_scheme = ABCache;
 	} else if (scheme == "NoCache")
 		_scheme = NoCache;
  	else if (scheme == "CacheOnly")
@@ -144,20 +147,20 @@ MemoryController::MemoryController(g_string& name, uint32_t frequency, uint32_t 
 			for (uint32_t j = 0; j < _num_ways; j++)
 	   			_cache[i].ways[j].valid = false;
 		}
-		if (_scheme == AlloyCache) {
+		if (_scheme == AlloyCache || _scheme ==  ABCache) {
 			_line_placement_policy = (LinePlacementPolicy *) gm_malloc(sizeof(LinePlacementPolicy));
 			new (_line_placement_policy) LinePlacementPolicy();
    			_line_placement_policy->initialize(config);
 		} else if (_scheme == HMA) {
 			_os_placement_policy = (OSPlacementPolicy *) gm_malloc(sizeof(OSPlacementPolicy));
 			new (_os_placement_policy) OSPlacementPolicy(this);
-		} else if (_scheme == UnisonCache || _scheme == HybridCache ){
+		} else if (_scheme == UnisonCache || _scheme == HybridCache || _scheme == ABCache){
 			_page_placement_policy = (PagePlacementPolicy *) gm_malloc(sizeof(PagePlacementPolicy));
 			new (_page_placement_policy) PagePlacementPolicy(this);
 		  		_page_placement_policy->initialize(config);
 		}
 	}
-	if (_scheme == HybridCache) {
+	if (_scheme == HybridCache || _scheme == ABCache) {
 		_tag_buffer = (TagBuffer *) gm_malloc(sizeof(TagBuffer));	
 		new (_tag_buffer) TagBuffer(config);
 	}
@@ -384,6 +387,8 @@ MemoryController::access(MemReq& req)
 		        MemReq tag_probe = {mc_address, GETS, req.childId, &state, req.cycle, req.childLock, req.initialState, req.srcId, req.flags};
 				req.cycle = _mcdram[mcdram_select]->access(tag_probe, 0, 2);
 				_mc_bw_per_step += 2;
+                //add counter inc here for metadata
+                hc_metadata.inc(32);
 				req.cycle = _ext_dram->access(req, 1, 4);
 				_ext_bw_per_step += 4;
 				_numTagLoad.inc();
@@ -417,10 +422,12 @@ MemoryController::access(MemReq& req)
 		        MemReq load_req = {tag * 64, GETS, req.childId, &state, req.cycle, req.childLock, req.initialState, req.srcId, req.flags};
 				_ext_dram->access(load_req, 2, access_size*4);
 				_ext_bw_per_step += access_size * 4;
+                //add counter inc here
 				// store the page to mcdram
 		        MemReq insert_req = {mc_address, PUTX, req.childId, &state, req.cycle, req.childLock, req.initialState, req.srcId, req.flags};
 				_mcdram[mcdram_select]->access(insert_req, 2, access_size*4);
 				_mc_bw_per_step += access_size * 4;
+                //add counter inc here
 				if (_scheme == Tagless) {
 		        	MemReq load_gipt_req = {tag * 64, GETS, req.childId, &state, req.cycle, req.childLock, req.initialState, req.srcId, req.flags};
 		        	MemReq store_gipt_req = {tag * 64, PUTS, req.childId, &state, req.cycle, req.childLock, req.initialState, req.srcId, req.flags};
@@ -521,6 +528,7 @@ MemoryController::access(MemReq& req)
 						} 
 					}
 
+                //add counter inc here
 					/////////////////////////////
             	} else {
 					_numCleanEviction.inc();
@@ -797,6 +805,10 @@ MemoryController::initStats(AggregateStat* parentStat)
 	
 	_numTouchedLines.init("totalTouchLines", "total # of touched lines in UnisonCache"); memStats->append(&_numTouchedLines);
 	_numEvictedLines.init("totalEvictLines", "total # of evicted lines in UnisonCache"); memStats->append(&_numEvictedLines);
+
+    // counters for our purpose
+    hc_metadata.init("metadataBytes", "total # of bytes used for metadata checking, ie., miss probe"); memStats->append(&hc_metadata);
+    hc_replacement.init("replacementBytes", "total # of bytes used for page replacement"); memStats->append(&hc_replacement);
 
 	_ext_dram->initStats(memStats);
 	for (uint32_t i = 0; i < _mcdram_per_mc; i++) 
