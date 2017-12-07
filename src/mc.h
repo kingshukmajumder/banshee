@@ -22,6 +22,7 @@ enum Scheme
    UnisonCache,
    HMA,
    HybridCache,
+   ABCache,
    NoCache,
    CacheOnly,
    Tagless
@@ -139,6 +140,7 @@ public:
 	TagBuffer * getTagBuffer() { return _tag_buffer; };
 
 	uint64_t getGranularity() { return _granularity; };
+	uint64_t getVCGranularity() { return _virtual_cache_granularity; };
 
 private:
 	// For Alloy Cache.
@@ -169,6 +171,9 @@ private:
 	// For HybridCache
 	uint32_t _footprint_size; 
 
+    // For ABCache
+    uint32_t _virtual_cache_granularity;
+
 	// Balance in- and off-package DRAM bandwidth. 
 	// From "BATMAN: Maximizing Bandwidth Utilization of Hybrid Memory Systems"
 	bool _bw_balance; 
@@ -197,6 +202,10 @@ private:
 	// For UnisonCache
 	Counter _numTouchedLines;
 	Counter _numEvictedLines;
+
+    //adding counter for our purposes
+    Counter hc_metadata;
+    Counter hc_replacement;
 
 	uint64_t _num_hit_per_step;
    	uint64_t _num_miss_per_step;

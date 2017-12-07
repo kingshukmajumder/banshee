@@ -103,7 +103,7 @@ class SchedEvent : public TimingEvent, public GlobAlloc {
         SchedEvent(DDRMemory* _mem, int32_t domain) : TimingEvent(0, 0, domain), mem(_mem) {
             setMinStartCycle(0);
             setRunning();
-            hold()
+            hold();
             state = IDLE;
             next = nullptr;
         }
